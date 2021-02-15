@@ -8,15 +8,17 @@
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
+final class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        viewControllers = [
+        generateViewController(rootViewController: HomeSuperHeroModuleConfigurator().configure(), image: UIImage(named: "homeIcon") ?? UIImage(),  title: "Home")
+        ]
     }
 }
 
 
-extension MainTabBarController {
+private extension MainTabBarController {
     func generateViewController(rootViewController: UIViewController, image: UIImage, title: String) -> UIViewController {
         let navigationController = UINavigationController(rootViewController: rootViewController)
         navigationController.tabBarItem.image = image
