@@ -144,6 +144,7 @@
 		3272104025DACBED00F67BF5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3272108325DAD07F00F67BF5 /* New Group */,
 				3272104125DACBED00F67BF5 /* .gitkeep */,
 			);
 			path = Services;
@@ -298,6 +299,8 @@
 		3272106425DACBED00F67BF5 /* User Stories */ = {
 			isa = PBXGroup;
 			children = (
+				3272108425DAD29100F67BF5 /* HomeSuperHero */,
+				3272108525DAD2C800F67BF5 /* DetailSuperHero */,
 				3272106525DACBED00F67BF5 /* .gitkeep */,
 			);
 			path = "User Stories";
@@ -309,6 +312,27 @@
 				3272106E25DACBED00F67BF5 /* Colors.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		3272108325DAD07F00F67BF5 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		3272108425DAD29100F67BF5 /* HomeSuperHero */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeSuperHero;
+			sourceTree = "<group>";
+		};
+		3272108525DAD2C800F67BF5 /* DetailSuperHero */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailSuperHero;
 			sourceTree = "<group>";
 		};
 		65C73F8728B3F625F2846DE3 /* Frameworks */ = {
