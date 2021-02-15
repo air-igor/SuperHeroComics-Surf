@@ -21,6 +21,7 @@
 		3272107125DACBED00F67BF5 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3272107025DACBED00F67BF5 /* swiftgen.yml */; };
 		3272107325DACBED00F67BF5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3272107225DACBED00F67BF5 /* .swiftlint.yml */; };
 		3272107A25DACBED00F67BF5 /* ModuleTrasitionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272107925DACBED00F67BF5 /* ModuleTrasitionable.swift */; };
+		3272108225DACE0B00F67BF5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272108125DACE0B00F67BF5 /* MainTabBarController.swift */; };
 		BCB4E6B1AD8FFEEDCEB9829F /* Pods_SuperHeroComics_Surf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4C0A519C009F7B60DE908D /* Pods_SuperHeroComics_Surf.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		3272107825DACBED00F67BF5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		3272107925DACBED00F67BF5 /* ModuleTrasitionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleTrasitionable.swift; sourceTree = "<group>"; };
 		3272107B25DACBED00F67BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3272108125DACE0B00F67BF5 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		3CF600651A2B9832D0522D7B /* Pods-SuperHeroComics-Surf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroComics-Surf.debug.xcconfig"; path = "Target Support Files/Pods-SuperHeroComics-Surf/Pods-SuperHeroComics-Surf.debug.xcconfig"; sourceTree = "<group>"; };
 		C748EAC4CFB26D182E3C7F9C /* Pods-SuperHeroComics-Surf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroComics-Surf.release.xcconfig"; path = "Target Support Files/Pods-SuperHeroComics-Surf/Pods-SuperHeroComics-Surf.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -262,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				3272105825DACBED00F67BF5 /* .gitkeep */,
+				3272108125DACE0B00F67BF5 /* MainTabBarController.swift */,
 			);
 			path = "Reusable Layer";
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				3272106825DACBED00F67BF5 /* Assets.swift in Sources */,
 				3272106F25DACBED00F67BF5 /* Colors.swift in Sources */,
 				3272106A25DACBED00F67BF5 /* Fonts.swift in Sources */,
+				3272108225DACE0B00F67BF5 /* MainTabBarController.swift in Sources */,
 				3272107A25DACBED00F67BF5 /* ModuleTrasitionable.swift in Sources */,
 				3272106C25DACBED00F67BF5 /* Strings.swift in Sources */,
 				3272106325DACBED00F67BF5 /* AppDelegate.swift in Sources */,
