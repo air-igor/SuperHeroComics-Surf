@@ -1,0 +1,20 @@
+xcassets:
+  inputs:
+    - SuperHeroComics-Surf/Resources/Images/Assets.xcassets
+  outputs:
+    - templateName: swift4
+      output: SuperHeroComics-Surf/Resources/Images/Assets.swift
+
+fonts:
+  inputs:
+    - SuperHeroComics-Surf/Resources/Fonts/
+  outputs:
+    - templateName: swift4
+      output: SuperHeroComics-Surf/Resources/Fonts/Fonts.swift
+
+strings:
+  inputs:
+    - SuperHeroComics-Surf/Resources/Strings/Localizable.strings
+  outputs:
+    - templateName: structured-swift4
+      output: SuperHeroComics-Surf/Resources/Strings/Strings.swift
