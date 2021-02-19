@@ -12,17 +12,16 @@ final class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewControllers = [
-        generateViewController(rootViewController: HomeSuperHeroModuleConfigurator().configure(), image: UIImage(named: "homeIcon") ?? UIImage(),  title: "Home")
+        generateViewController(rootViewController: HomeSuperHeroModuleConfigurator().configure(), image: UIImage(named: "homeIcon") ?? UIImage())
         ]
     }
 }
 
 
 private extension MainTabBarController {
-    func generateViewController(rootViewController: UIViewController, image: UIImage, title: String) -> UIViewController {
+    func generateViewController(rootViewController: UIViewController, image: UIImage) -> UIViewController {
         let navigationController = UINavigationController(rootViewController: rootViewController)
         navigationController.tabBarItem.image = image
-        navigationController.tabBarItem.title = title
         rootViewController.tabBarItem.title = title
         tabBar.tintColor = .black
         
