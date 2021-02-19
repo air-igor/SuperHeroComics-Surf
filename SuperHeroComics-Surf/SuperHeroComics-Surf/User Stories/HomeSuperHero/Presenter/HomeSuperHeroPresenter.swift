@@ -15,7 +15,7 @@ final class HomeSuperHeroPresenter: HomeSuperHeroViewOutput, HomeSuperHeroModule
     var output: HomeSuperHeroModuleOutput?
     var adapter: HomeSuperHeroCollectionViewAdapter?
     
-    // MARK: - Iternal methods
+    // MARK: - Internal methods
     
     func configure() {
         HeroesNetworkManager.shared.fetchRandomHeroesList(onCompletion: { [weak self] (HeroesList) in
@@ -25,7 +25,7 @@ final class HomeSuperHeroPresenter: HomeSuperHeroViewOutput, HomeSuperHeroModule
         }
     }
     
-    func show(heroes: HeroList) {
-        
+    func show(heroes: [HeroList]) {
+        router?.showDetailModule(heroes: heroes)
     }
 }
