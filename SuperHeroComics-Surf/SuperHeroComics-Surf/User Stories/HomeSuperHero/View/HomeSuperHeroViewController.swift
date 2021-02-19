@@ -16,8 +16,11 @@ final class HomeSuperHeroViewController: UIViewController, HomeSuperHeroViewInpu
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Private properties
-    
+
     private let refreshControl = UIRefreshControl()
+    
+    // MARK: - Properties
+    
     var adapter: HomeSuperHeroCollectionViewAdapter?
     var output: HomeSuperHeroViewOutput?
     
@@ -26,6 +29,7 @@ final class HomeSuperHeroViewController: UIViewController, HomeSuperHeroViewInpu
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Heroes"
         adapter?.set(collectionView: collectionView)
         collectionView.delegate = adapter
         collectionView.dataSource = adapter
@@ -40,7 +44,7 @@ final class HomeSuperHeroViewController: UIViewController, HomeSuperHeroViewInpu
         collectionView.reloadData()
     }
     
-    // MARK: - Iternal methods
+    // MARK: - Internal methods
     
     func viewModel(array: [HeroList]) {
         adapter?.set(items: array)
