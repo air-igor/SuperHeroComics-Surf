@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeSuperHeroAdapterOutput {
-    func show(heroes: HeroList)
+    func show(heroes: [HeroList])
 }
 
 final class HomeSuperHeroCollectionViewAdapter: NSObject {
@@ -67,9 +67,8 @@ extension HomeSuperHeroCollectionViewAdapter: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 
 extension HomeSuperHeroCollectionViewAdapter: UICollectionViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        //        self.output.show(heroes: Heroes)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.output.show(heroes: [items[indexPath.row]])
     }
 }
 
