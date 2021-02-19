@@ -14,10 +14,10 @@ final class HomeCocktailListRouter: HomeSuperHeroRouterInput {
     
     weak var view: ModuleTransitionable?
     
-    // MARK: - Iternal methods
+    // MARK: - Internal methods
     
-    func showDetailModule(heroes: HeroList) {
-        
+    func showDetailModule(heroes: [HeroList]) {
+        self.view?.push(module: DetailSuperHeroModuleConfigurator.configure(heroes: heroes), animated: true)
     }
     
     func showMessageModule(with message: String) {
