@@ -9,8 +9,8 @@
 import UIKit
 
 final class HomeSuperHeroCollectionViewCell: UICollectionViewCell {
-
-    // MARK: - Outlets
+    
+    // MARK: - IBOutlets
     
     @IBOutlet private weak var heroAvatar: UIImageView!
     @IBOutlet private weak var HeroName: UILabel!
@@ -25,15 +25,14 @@ final class HomeSuperHeroCollectionViewCell: UICollectionViewCell {
     }
     
     func configureCell(heroes: HeroList) {
-        HeroName.text = heroes.name
-        
         guard let avatarUrl = heroes.image?.url else { return }
+        HeroName.text = heroes.name
         heroAvatar.loadImage(urlSting: avatarUrl)
     }
-    
+
     private func setStyle() {
         heroAvatar.contentMode = .scaleAspectFill
         heroAvatar.layer.cornerRadius = heroAvatar.frame.height / 2
     }
-
+    
 }
