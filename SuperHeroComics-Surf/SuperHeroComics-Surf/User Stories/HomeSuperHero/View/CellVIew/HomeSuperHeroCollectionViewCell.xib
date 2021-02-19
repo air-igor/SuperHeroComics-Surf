@@ -22,13 +22,12 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ar9-Hy-qyk">
                                 <rect key="frame" x="16" y="5" width="80" height="80"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="a0t-Tl-zjg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zT6-qO-tV4">
-                                <rect key="frame" x="0.0" y="86" width="112" height="20.5"/>
+                                <rect key="frame" x="1" y="86" width="110" height="20.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -39,9 +38,9 @@
                             <constraint firstItem="zT6-qO-tV4" firstAttribute="top" secondItem="O61-QR-IgR" secondAttribute="top" constant="86" id="0T5-Db-ClT"/>
                             <constraint firstItem="ar9-Hy-qyk" firstAttribute="top" secondItem="O61-QR-IgR" secondAttribute="top" constant="5" id="AAq-Kl-smG"/>
                             <constraint firstItem="ar9-Hy-qyk" firstAttribute="leading" secondItem="O61-QR-IgR" secondAttribute="leading" constant="16" id="TF6-yJ-Sg7"/>
-                            <constraint firstItem="zT6-qO-tV4" firstAttribute="leading" secondItem="O61-QR-IgR" secondAttribute="leading" id="bAH-22-1Q0"/>
+                            <constraint firstItem="zT6-qO-tV4" firstAttribute="leading" secondItem="O61-QR-IgR" secondAttribute="leading" constant="1" id="bAH-22-1Q0"/>
                             <constraint firstAttribute="trailing" secondItem="ar9-Hy-qyk" secondAttribute="trailing" constant="16" id="qtB-AK-ffc"/>
-                            <constraint firstAttribute="trailing" secondItem="zT6-qO-tV4" secondAttribute="trailing" id="waI-2C-s9t"/>
+                            <constraint firstAttribute="trailing" secondItem="zT6-qO-tV4" secondAttribute="trailing" constant="1" id="waI-2C-s9t"/>
                         </constraints>
                     </view>
                 </subviews>
