@@ -22,12 +22,6 @@ final class DetailSuperHeroTableViewCell: UITableViewCell {
         setApperance()
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-    }
-    
-    
     func configure(with model: DetailSuperHeroViewModel) {
         guard let heroAvatarUrl = model.heroAvatar else { return }
         heroAvatar.loadImage(urlSting: heroAvatarUrl)
