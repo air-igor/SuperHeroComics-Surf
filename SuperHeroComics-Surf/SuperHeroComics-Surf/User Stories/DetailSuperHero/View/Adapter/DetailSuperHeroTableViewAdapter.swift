@@ -58,7 +58,7 @@ private extension DetailSuperHeroTableViewAdapter {
     
     func configureTableView() {
         tableView.registerCell(type: DetailSuperHeroTableViewCell.self)
-        tableView.registerCell(type: DetailSuperHeroReusableTableViewCell.self)
+        tableView.registerCell(type: DetailSuperHeroParametersTableViewCell.self)
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
