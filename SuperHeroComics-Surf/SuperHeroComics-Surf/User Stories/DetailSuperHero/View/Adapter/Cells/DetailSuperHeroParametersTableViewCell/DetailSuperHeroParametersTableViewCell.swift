@@ -1,5 +1,5 @@
 //
-//  DetailSuperHeroReusableTableViewCell.swift
+//  DetailSuperHeroParametersTableViewCell.swift
 //  SuperHeroComics-Surf
 //
 //  Created by Игорь Попов on 21.02.2021.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class DetailSuperHeroReusableTableViewCell: UITableViewCell {
+final class DetailSuperHeroParametersTableViewCell: UITableViewCell {
 
     // MARK: - IBOutlets
     
