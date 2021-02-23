@@ -19,4 +19,8 @@ final class DetailSuperHeroParametersTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
+    func setParameters(with title: String?, with parameters: DetailSuperHeroViewModel) {
+        headerTitle.text = title
+    }
+    
 }
