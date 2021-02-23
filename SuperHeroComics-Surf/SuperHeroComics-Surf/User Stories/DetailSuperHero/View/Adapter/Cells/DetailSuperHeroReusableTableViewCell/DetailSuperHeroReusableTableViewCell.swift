@@ -12,8 +12,8 @@ final class DetailSuperHeroReusableTableViewCell: UITableViewCell {
 
     // MARK: - IBOutlets
     
-    @IBOutlet weak var headerTitle: UILabel!
-    @IBOutlet weak var parameterStackView: UIStackView!
+    @IBOutlet private weak var headerTitle: UILabel!
+    @IBOutlet private weak var parameterStackView: UIStackView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
