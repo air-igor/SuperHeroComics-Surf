@@ -30,7 +30,7 @@ final class DetailSuperHeroTableViewCell: UITableViewCell {
         
     }
     
-    func setApperance() {
+    private func setApperance() {
         heroView.backgroundColor = UIColor.init(rgb: 0xF1F1F1)
         heroView.layer.cornerRadius = 8
         heroAvatar.contentMode = .scaleAspectFill
