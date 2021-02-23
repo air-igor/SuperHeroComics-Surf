@@ -7,5 +7,4 @@
 //
 
 protocol DetailSuperHeroModuleInput: class {
-    func configureModule(with heroes: [HeroList])
 }

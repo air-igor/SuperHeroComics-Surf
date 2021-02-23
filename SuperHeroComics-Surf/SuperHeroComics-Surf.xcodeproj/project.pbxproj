@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3235350825E2B2EE0078FBF4 /* DetailSuperHeroReusableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3235350625E2B2EE0078FBF4 /* DetailSuperHeroReusableTableViewCell.swift */; };
+		3235350925E2B2EE0078FBF4 /* DetailSuperHeroReusableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3235350725E2B2EE0078FBF4 /* DetailSuperHeroReusableTableViewCell.xib */; };
+		3235350E25E2B4980078FBF4 /* UITableViewCell + RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3235350D25E2B4980078FBF4 /* UITableViewCell + RegisterCell.swift */; };
+		3235351025E2B9420078FBF4 /* DetailSuperHeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3235350F25E2B9420078FBF4 /* DetailSuperHeroTableViewCell.xib */; };
+		3257270E25E186810019A24C /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3257270D25E186810019A24C /* TabBarItem.swift */; };
+		3257271125E18D400019A24C /* DetailSuperHeroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3257271025E18D400019A24C /* DetailSuperHeroViewModel.swift */; };
 		3272103725DACBED00F67BF5 /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = 3272103625DACBED00F67BF5 /* fastlane */; };
 		3272103925DACBED00F67BF5 /* ci in Resources */ = {isa = PBXBuildFile; fileRef = 3272103825DACBED00F67BF5 /* ci */; };
 		3272103B25DACBED00F67BF5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3272103A25DACBED00F67BF5 /* Podfile */; };
@@ -53,13 +59,18 @@
 		32D7741D25DD8D3800A63A9E /* DetailSuperHeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D7741B25DD8D3800A63A9E /* DetailSuperHeroViewController.swift */; };
 		32D7741E25DD8D3800A63A9E /* DetailSuperHeroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D7741C25DD8D3800A63A9E /* DetailSuperHeroViewController.xib */; };
 		32D7742725DEBB0400A63A9E /* DetailSuperHeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D7742525DEBB0400A63A9E /* DetailSuperHeroTableViewCell.swift */; };
-		32D7742825DEBB0400A63A9E /* DetailSuperHeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D7742625DEBB0400A63A9E /* DetailSuperHeroTableViewCell.xib */; };
 		32D7742A25E03E8A00A63A9E /* UIColor + Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D7742925E03E8A00A63A9E /* UIColor + Hex.swift */; };
 		BCB4E6B1AD8FFEEDCEB9829F /* Pods_SuperHeroComics_Surf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4C0A519C009F7B60DE908D /* Pods_SuperHeroComics_Surf.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B4C0A519C009F7B60DE908D /* Pods_SuperHeroComics_Surf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperHeroComics_Surf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3235350625E2B2EE0078FBF4 /* DetailSuperHeroReusableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSuperHeroReusableTableViewCell.swift; sourceTree = "<group>"; };
+		3235350725E2B2EE0078FBF4 /* DetailSuperHeroReusableTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailSuperHeroReusableTableViewCell.xib; sourceTree = "<group>"; };
+		3235350D25E2B4980078FBF4 /* UITableViewCell + RegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell + RegisterCell.swift"; sourceTree = "<group>"; };
+		3235350F25E2B9420078FBF4 /* DetailSuperHeroTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailSuperHeroTableViewCell.xib; path = "../../../../../../../../../../Desktop/SuperHeroComics-Surf/SuperHeroComics-Surf/SuperHeroComics-Surf/User Stories/DetailSuperHero/View/Adapter/Cells/DetailSuperHeroTableViewCell/DetailSuperHeroTableViewCell.xib"; sourceTree = "<group>"; };
+		3257270D25E186810019A24C /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		3257271025E18D400019A24C /* DetailSuperHeroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSuperHeroViewModel.swift; sourceTree = "<group>"; };
 		3272103225DACBED00F67BF5 /* SuperHeroComics-Surf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SuperHeroComics-Surf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3272103625DACBED00F67BF5 /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fastlane; path = ../../fastlane; sourceTree = "<group>"; };
 		3272103825DACBED00F67BF5 /* ci */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ci; path = ../../ci; sourceTree = "<group>"; };
@@ -129,7 +140,6 @@
 		32D7741B25DD8D3800A63A9E /* DetailSuperHeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSuperHeroViewController.swift; sourceTree = "<group>"; };
 		32D7741C25DD8D3800A63A9E /* DetailSuperHeroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailSuperHeroViewController.xib; sourceTree = "<group>"; };
 		32D7742525DEBB0400A63A9E /* DetailSuperHeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSuperHeroTableViewCell.swift; sourceTree = "<group>"; };
-		32D7742625DEBB0400A63A9E /* DetailSuperHeroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailSuperHeroTableViewCell.xib; sourceTree = "<group>"; };
 		32D7742925E03E8A00A63A9E /* UIColor + Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Hex.swift"; sourceTree = "<group>"; };
 		3CF600651A2B9832D0522D7B /* Pods-SuperHeroComics-Surf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroComics-Surf.debug.xcconfig"; path = "Target Support Files/Pods-SuperHeroComics-Surf/Pods-SuperHeroComics-Surf.debug.xcconfig"; sourceTree = "<group>"; };
 		C748EAC4CFB26D182E3C7F9C /* Pods-SuperHeroComics-Surf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroComics-Surf.release.xcconfig"; path = "Target Support Files/Pods-SuperHeroComics-Surf/Pods-SuperHeroComics-Surf.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +157,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3235350C25E2B4380078FBF4 /* DetailSuperHeroReusableTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3235350625E2B2EE0078FBF4 /* DetailSuperHeroReusableTableViewCell.swift */,
+				3235350725E2B2EE0078FBF4 /* DetailSuperHeroReusableTableViewCell.xib */,
+			);
+			path = DetailSuperHeroReusableTableViewCell;
+			sourceTree = "<group>";
+		};
+		3257270C25E186710019A24C /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				3272108125DACE0B00F67BF5 /* MainTabBarController.swift */,
+				3257270D25E186810019A24C /* TabBarItem.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		3257270F25E18BD20019A24C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				32D7740625DD7CE400A63A9E /* DetailSuperHeroTableViewCell */,
+				3235350C25E2B4380078FBF4 /* DetailSuperHeroReusableTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3272102725DACBED00F67BF5 = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +346,7 @@
 		3272105125DACBED00F67BF5 /* Base Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3257270C25E186710019A24C /* TabBar */,
 				3272105225DACBED00F67BF5 /* .gitkeep */,
 			);
 			path = "Base Classes";
@@ -327,6 +365,7 @@
 			children = (
 				3272105625DACBED00F67BF5 /* .gitkeep */,
 				327210A225DADED700F67BF5 /* UIImageVIew + Cache.swift */,
+				3235350D25E2B4980078FBF4 /* UITableViewCell + RegisterCell.swift */,
 				32D7742925E03E8A00A63A9E /* UIColor + Hex.swift */,
 			);
 			path = Extensions;
@@ -336,7 +375,6 @@
 			isa = PBXGroup;
 			children = (
 				3272105825DACBED00F67BF5 /* .gitkeep */,
-				3272108125DACE0B00F67BF5 /* MainTabBarController.swift */,
 			);
 			path = "Reusable Layer";
 			sourceTree = "<group>";
@@ -477,11 +515,11 @@
 			isa = PBXGroup;
 			children = (
 				32D7740325DD7CC200A63A9E /* Adapter */,
-				32D7740625DD7CE400A63A9E /* CellView */,
 				32D7741B25DD8D3800A63A9E /* DetailSuperHeroViewController.swift */,
 				32D7741C25DD8D3800A63A9E /* DetailSuperHeroViewController.xib */,
 				32D773FD25DD7BA100A63A9E /* DetailSuperHeroViewOutput.swift */,
 				32D773FF25DD7BCA00A63A9E /* DetailSuperHeroViewInput.swift */,
+				3257271025E18D400019A24C /* DetailSuperHeroViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -517,17 +555,18 @@
 			isa = PBXGroup;
 			children = (
 				32D7740425DD7CDC00A63A9E /* DetailSuperHeroTableViewAdapter.swift */,
+				3257270F25E18BD20019A24C /* Cells */,
 			);
 			path = Adapter;
 			sourceTree = "<group>";
 		};
-		32D7740625DD7CE400A63A9E /* CellView */ = {
+		32D7740625DD7CE400A63A9E /* DetailSuperHeroTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				32D7742525DEBB0400A63A9E /* DetailSuperHeroTableViewCell.swift */,
-				32D7742625DEBB0400A63A9E /* DetailSuperHeroTableViewCell.xib */,
+				3235350F25E2B9420078FBF4 /* DetailSuperHeroTableViewCell.xib */,
 			);
-			path = CellView;
+			path = DetailSuperHeroTableViewCell;
 			sourceTree = "<group>";
 		};
 		65C73F8728B3F625F2846DE3 /* Frameworks */ = {
@@ -609,7 +648,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32D7742825DEBB0400A63A9E /* DetailSuperHeroTableViewCell.xib in Resources */,
+				3235351025E2B9420078FBF4 /* DetailSuperHeroTableViewCell.xib in Resources */,
+				3235350925E2B2EE0078FBF4 /* DetailSuperHeroReusableTableViewCell.xib in Resources */,
 				3272107325DACBED00F67BF5 /* .swiftlint.yml in Resources */,
 				32D7741E25DD8D3800A63A9E /* DetailSuperHeroViewController.xib in Resources */,
 				3272105F25DACBED00F67BF5 /* LaunchScreen.xib in Resources */,
@@ -713,6 +753,7 @@
 				3272106825DACBED00F67BF5 /* Assets.swift in Sources */,
 				3272109F25DADBEF00F67BF5 /* UrlConfiguration.swift in Sources */,
 				32D7740E25DD82FC00A63A9E /* DetailSuperHeroModuleInput.swift in Sources */,
+				3257270E25E186810019A24C /* TabBarItem.swift in Sources */,
 				32D773FE25DD7BA100A63A9E /* DetailSuperHeroViewOutput.swift in Sources */,
 				327210AD25DAE5FB00F67BF5 /* HomeSuperHeroRouter.swift in Sources */,
 				3272109725DAD69600F67BF5 /* HomeSuperHeroViewInput.swift in Sources */,
@@ -728,6 +769,7 @@
 				3272109D25DADBBC00F67BF5 /* Errors.swift in Sources */,
 				32D7741D25DD8D3800A63A9E /* DetailSuperHeroViewController.swift in Sources */,
 				32D7740C25DD82D800A63A9E /* DetailSuperHeroModuleOutput.swift in Sources */,
+				3235350825E2B2EE0078FBF4 /* DetailSuperHeroReusableTableViewCell.swift in Sources */,
 				327210A925DAE4BC00F67BF5 /* HomeSuperHeroModuleInput.swift in Sources */,
 				3272109B25DAD91800F67BF5 /* HeroModel.swift in Sources */,
 				3272108225DACE0B00F67BF5 /* MainTabBarController.swift in Sources */,
@@ -740,10 +782,12 @@
 				32D7742A25E03E8A00A63A9E /* UIColor + Hex.swift in Sources */,
 				3272109425DAD62700F67BF5 /* HomeSuperHeroViewController.swift in Sources */,
 				327210AF25DAE61000F67BF5 /* HomeSuperHeroInput.swift in Sources */,
+				3235350E25E2B4980078FBF4 /* UITableViewCell + RegisterCell.swift in Sources */,
 				327210AB25DAE4C800F67BF5 /* HomeSuperHeroModuleOutput.swift in Sources */,
 				3272109025DAD5C900F67BF5 /* HomeSuperHeroCollectionViewCell.swift in Sources */,
 				32D7740025DD7BCA00A63A9E /* DetailSuperHeroViewInput.swift in Sources */,
 				3272106325DACBED00F67BF5 /* AppDelegate.swift in Sources */,
+				3257271125E18D400019A24C /* DetailSuperHeroViewModel.swift in Sources */,
 				327210A725DAE4A300F67BF5 /* HomeSuperHeroPresenter.swift in Sources */,
 				327210A525DADF7E00F67BF5 /* HeroesNetworkManager.swift in Sources */,
 			);

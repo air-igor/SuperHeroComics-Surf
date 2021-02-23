@@ -7,5 +7,5 @@
 //
 
 protocol DetailSuperHeroViewOutput {
-    func setData()
+    func viewLoaded()
 }

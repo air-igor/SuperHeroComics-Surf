@@ -12,41 +12,57 @@ final class DetailSuperHeroTableViewAdapter: NSObject {
     
     // MARK: - Private properties
         
-    private var items: [HeroList] = []
-    private var tableView: UITableView?
+    private var items: [DetailSuperHeroViewModel] = []
+    private var tableView: UITableView
     
-    // MARK: - Iternal methods
+    // MARK: - Initialization
     
-    func set(tableView: UITableView) {
-        tableView.register(UINib(nibName: "DetailSuperHeroTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        self.tableView?.delegate = tableView.delegate
-        self.tableView?.dataSource = tableView.dataSource
-        configureTable()
+    init(tableView: UITableView) {
+        self.tableView = tableView
+        super.init()
+        configureTableView()
     }
     
-    func set(items: [HeroList]) {
+    // MARK: - Internal methods
+
+    func configure(with items: [DetailSuperHeroViewModel]) {
         self.items = items
+        tableView.reloadData()
     }
-    
-    func configureTable() {
-        tableView?.showsVerticalScrollIndicator = false
-        tableView?.showsHorizontalScrollIndicator = false
-        tableView?.separatorStyle = .none
-    }
+
 }
 
 // MARK: - UITableViewDataSource
 
 extension DetailSuperHeroTableViewAdapter: UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DetailSuperHeroTableViewCell
-        cell.setCell(heroes: items[indexPath.row])
+        guard let cell = tableView.dequeueCell(withType: DetailSuperHeroTableViewCell.self, for: indexPath) as? DetailSuperHeroTableViewCell else {
+            return UITableViewCell()
+        }
+
+        cell.configure(with: items[indexPath.row])
         
         return cell
     }
+
+}
+
+// MARK: - Private Methods
+
+private extension DetailSuperHeroTableViewAdapter {
     
+    func configureTableView() {
+        tableView.registerCell(type: DetailSuperHeroTableViewCell.self)
+        tableView.registerCell(type: DetailSuperHeroReusableTableViewCell.self)
+        tableView.dataSource = self
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.separatorStyle = .none
+    }
+
 }

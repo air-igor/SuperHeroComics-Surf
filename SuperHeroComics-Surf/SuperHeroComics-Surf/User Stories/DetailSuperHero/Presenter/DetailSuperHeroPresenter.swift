@@ -13,18 +13,22 @@ final class DetailSuperHeroPresenter: DetailSuperHeroViewOutput, DetailSuperHero
     
     weak var view: DetailSuperHeroViewInput?
     var router: DetailSuperHeroRouter?
-    var output: DetailSuperHeroViewOutput?
-    var heroes: [HeroList]?
+    var output: DetailSuperHeroModuleOutput?
+    
+    // MARK: - Private Properties
+    
+    private let heroes: [HeroList]
+    
+    // MARK: - Initialization
+    
+    init(with heroes: [HeroList]) {
+        self.heroes = heroes
+    }
     
     // MARK: - DetailModuleInput
     
-    func configureModule(with heroes: [HeroList]) {
-        self.heroes = heroes
-        
-    }
-    
-    func setData() {
-        view?.configure(with: heroes!)
+    func viewLoaded() {
+        view?.configure(with: heroes.map{ DetailSuperHeroViewModel(with: $0) })
     }
     
     

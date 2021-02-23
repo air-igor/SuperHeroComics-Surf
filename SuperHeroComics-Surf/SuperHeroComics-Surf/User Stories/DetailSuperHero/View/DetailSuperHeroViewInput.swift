@@ -7,5 +7,5 @@
 //
 
 protocol DetailSuperHeroViewInput: class {
-    func configure(with heroes: [HeroList])
+    func configure(with heroes: [DetailSuperHeroViewModel])
 }

@@ -10,27 +10,29 @@ import UIKit
 
 final class DetailSuperHeroViewController: UIViewController, DetailSuperHeroViewInput, ModuleTransitionable {
     
-    
-    // MARK: - Properties
-    
-    var adapter: DetailSuperHeroTableViewAdapter?
-    var output: DetailSuperHeroViewOutput?
-    
     // MARK: - IBOutlets
     
     @IBOutlet private weak var tableView: UITableView!
+    
+    // MARK: - Properties
+    
+    var output: DetailSuperHeroViewOutput?
+    
+    // MARK: - Private Properties
+    
+    private lazy var adapter = DetailSuperHeroTableViewAdapter(tableView: tableView)
     
     // MARK: - UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        adapter?.set(tableView: tableView)
-        tableView.dataSource = adapter
-        output?.setData()
+        output?.viewLoaded()
     }
     
-    func configure(with heroes: [HeroList]) {
-        adapter?.set(items: heroes)
-        tableView.reloadData()
+    // MARK: - DetailSuperHeroViewInput
+    
+    func configure(with heroes: [DetailSuperHeroViewModel]) {
+        adapter.configure(with: heroes)
     }
+
 }

@@ -15,17 +15,15 @@ final class DetailSuperHeroModuleConfigurator {
     static func configure(heroes: [HeroList], output: DetailSuperHeroModuleOutput? = nil) -> DetailSuperHeroViewController {
         
         let view = DetailSuperHeroViewController()
-        let presenter = DetailSuperHeroPresenter()
+        let presenter = DetailSuperHeroPresenter(with: heroes)
         let router = DetailSuperHeroRouter()
         
-        presenter.output = output as? DetailSuperHeroViewOutput
+        presenter.output = output
         presenter.view = view
         presenter.router = router
-        presenter.configureModule(with: heroes)
         
         router.view = view
         view.output = presenter
-        view.adapter = DetailSuperHeroTableViewAdapter()
         
         return view
     }
