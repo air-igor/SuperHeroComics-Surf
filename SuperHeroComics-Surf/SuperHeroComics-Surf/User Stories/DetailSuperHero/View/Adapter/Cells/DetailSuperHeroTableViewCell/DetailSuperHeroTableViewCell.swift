@@ -19,7 +19,7 @@ final class DetailSuperHeroTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setStyle()
+        setApperance()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,7 +36,7 @@ final class DetailSuperHeroTableViewCell: UITableViewCell {
         
     }
     
-    func setStyle() {
+    func setApperance() {
         heroView.backgroundColor = UIColor.init(rgb: 0xF1F1F1)
         heroView.layer.cornerRadius = 8
         heroAvatar.contentMode = .scaleAspectFill
