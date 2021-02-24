@@ -23,18 +23,20 @@ struct DetailSuperHeroHeaderViewModel {
 
 struct DetailSuperHeroParametersViewModel {
     let title: String?
+    let parameters: [String]?
     
-    init(title: String? = nil) {
+    init(title: String? = nil, parameters: [String]? = nil) {
         self.title = title
+        self.parameters = parameters
     }
 }
 
 
 struct DetailSuperHeroViewModel {
     var header: DetailSuperHeroHeaderViewModel? = nil
-    let biographyParameters: DetailSuperHeroParametersViewModel?
-    let workParameters: DetailSuperHeroParametersViewModel?
-    let connectionsParamaters: DetailSuperHeroParametersViewModel?
+    var biographyParameters: DetailSuperHeroParametersViewModel? = nil
+    var workParameters: DetailSuperHeroParametersViewModel? = nil
+    var connectionsParamaters: DetailSuperHeroParametersViewModel? = nil
     
     init(with entity: HeroList) {
         if let name = entity.name {
@@ -51,8 +53,27 @@ struct DetailSuperHeroViewModel {
                                 powerStats: powerStats)
         }
         
-        self.biographyParameters = .init(title: "Biography")
-        self.workParameters = .init(title: "Work")
-        self.connectionsParamaters = .init(title: "Connections")
+        if entity.biography != nil {
+            let allParamaters = [
+                "Full Name: \n\(entity.biography?.fullName ?? "")",
+                "Alter Egos: \n\(entity.biography?.alterEgos ?? "")"
+            ]
+            
+            self.biographyParameters = .init(title: "Biography", parameters: allParamaters)
+        }
+        if entity.work != nil {
+            let allParamaters = [
+                "Occupation: \n\(entity.work?.occupation ?? "")",
+                "Base: \n\(entity.work?.base ?? "")"
+            ]
+            self.workParameters = .init(title: "Work", parameters: allParamaters)
+        }
+        if entity.connections != nil {
+            let allParamaters = [
+                "Group Affiliation: \n\(entity.connections?.groupAffiliation ?? "")",
+                "Relatives: \n\(entity.connections?.relatives ?? "")"
+            ]
+            self.connectionsParamaters = .init(title: "Connections", parameters: allParamaters)
+        }
     }
 }
