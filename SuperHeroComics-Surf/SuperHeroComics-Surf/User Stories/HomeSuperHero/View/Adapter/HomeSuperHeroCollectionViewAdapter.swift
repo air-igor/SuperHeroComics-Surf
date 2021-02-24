@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeSuperHeroAdapterOutput {
-    func show(heroes: [HeroList])
+    func show(heroes: HeroList)
 }
 
 final class HomeSuperHeroCollectionViewAdapter: NSObject {
@@ -29,8 +29,7 @@ final class HomeSuperHeroCollectionViewAdapter: NSObject {
     }
     
     func set(collectionView: UICollectionView) {
-        collectionView.register(UINib(nibName: "HomeSuperHeroCollectionViewCell",
-                                      bundle: nil), forCellWithReuseIdentifier: "cell")
+        collectionView.registerCell(type: HomeSuperHeroCollectionViewCell.self)
         self.collectionView = collectionView
         configureTable()
         self.collectionView?.delegate = collectionView.delegate
@@ -55,7 +54,10 @@ extension HomeSuperHeroCollectionViewAdapter: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! HomeSuperHeroCollectionViewCell
+        guard let cell = collectionView.dequeueCell(withType:
+            HomeSuperHeroCollectionViewCell.self, for: indexPath) as?
+            HomeSuperHeroCollectionViewCell else {
+                return UICollectionViewCell() }
         
         cell.configureCell(heroes: items[indexPath.row])
         
@@ -68,7 +70,7 @@ extension HomeSuperHeroCollectionViewAdapter: UICollectionViewDataSource {
 
 extension HomeSuperHeroCollectionViewAdapter: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.output.show(heroes: [items[indexPath.row]])
+        self.output.show(heroes: items[indexPath.row])
     }
 }
 
