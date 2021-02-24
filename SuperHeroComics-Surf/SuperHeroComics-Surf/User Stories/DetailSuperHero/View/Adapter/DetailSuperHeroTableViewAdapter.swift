@@ -65,7 +65,8 @@ private extension DetailSuperHeroTableViewAdapter {
                 guard let cell = DetailSuperHeroParametersTableViewCell.loadFromNib() as? DetailSuperHeroParametersTableViewCell else {
                     return UITableViewCell()
                 }
-                cell.configure(with: model.title)
+                cell.configure(with: model.title, with: model)
+                
                 return cell
         }
         self.cells.append(contentsOf: cells)
