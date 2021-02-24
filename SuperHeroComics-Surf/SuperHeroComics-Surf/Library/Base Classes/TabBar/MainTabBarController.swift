@@ -29,7 +29,7 @@ private extension MainTabBarController {
             let view = HomeSuperHeroModuleConfigurator().configure()
             return makeRootNavigationController(with: view, title: type.title, image: type.image)
         case .search:
-            let view = UIViewController()
+            let view = SearchSuperHeroModuleConfigurator().configure()
             return makeRootNavigationController(with: view, title: type.title, image: type.image)
         }
     }
