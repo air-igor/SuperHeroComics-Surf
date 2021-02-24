@@ -24,7 +24,7 @@ final class HomeSuperHeroCollectionViewCell: UICollectionViewCell {
         setStyle()
     }
     
-    func configureCell(heroes: HeroEntity) {
+    func configureCell(heroes: HeroList) {
         guard let avatarUrl = heroes.image?.url else { return }
         HeroName.text = heroes.name
         heroAvatar.loadImage(urlString: avatarUrl)
