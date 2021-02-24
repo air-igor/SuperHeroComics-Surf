@@ -29,7 +29,6 @@ final class HomeSuperHeroViewController: UIViewController, HomeSuperHeroViewInpu
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Heroes"
         adapter?.set(collectionView: collectionView)
         collectionView.delegate = adapter
         collectionView.dataSource = adapter
