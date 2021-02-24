@@ -10,15 +10,15 @@ import UIKit
 
 let imageCache = NSCache<AnyObject, AnyObject>()
 
-// MARK: - UIImageView extension
+// MARK: - UIImageView Extension
 
 extension UIImageView {
     
-    func loadImage(urlSting: String) {
-        guard let url = URL(string: urlSting) else { return }
+    func loadImage(urlString: String) {
+        guard let url = URL(string: urlString) else { return }
         image = nil
         
-        if let imageFromCache = imageCache.object(forKey: urlSting as AnyObject) {
+        if let imageFromCache = imageCache.object(forKey: urlString as AnyObject) {
             image = imageFromCache as? UIImage
             return
         }
@@ -27,7 +27,7 @@ extension UIImageView {
             switch result {
             case .success(let data):
                 guard let imageToCache = UIImage(data: data) else { return }
-                imageCache.setObject(imageToCache, forKey: urlSting as AnyObject)
+                imageCache.setObject(imageToCache, forKey: urlString as AnyObject)
                 self.image = UIImage(data: data)
             case .failure(_):
                     self.image = UIImage()
