@@ -15,18 +15,26 @@ final class DetailSuperHeroTableViewCell: UITableViewCell {
     @IBOutlet private weak var heroView: UIView!
     @IBOutlet private weak var heroAvatar: UIImageView!
     @IBOutlet private weak var heroName: UILabel!
-    @IBOutlet private weak var powerStats: UILabel!
+    @IBOutlet private weak var powerStatsStackView: UIStackView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setApperance()
     }
     
-    func configure(with model: DetailSuperHeroViewModel) {
-        guard let heroAvatarUrl = model.heroAvatar else { return }
-        heroAvatar.loadImage(urlSting: heroAvatarUrl)
-        heroName.text = model.heroName
-        powerStats.text = model.heroPowerStats
+    func configure(with model: DetailSuperHeroHeaderViewModel) {
+        guard let url = model.avatar else { return }
+        heroAvatar.loadImage(urlString: url)
+        heroName.text = model.name
+        if let powerStats = model.powerStats {
+            powerStats.forEach {
+                let label = UILabel()
+                label.font = UIFont(name: "Avenir", size: 18)
+                label.text = $0
+                powerStatsStackView.addArrangedSubview(label)
+            }
+        }
         
     }
     
@@ -34,9 +42,7 @@ final class DetailSuperHeroTableViewCell: UITableViewCell {
         heroView.backgroundColor = UIColor.init(rgb: 0xF1F1F1)
         heroView.layer.cornerRadius = 8
         heroAvatar.contentMode = .scaleAspectFill
-        heroAvatar.layer.cornerRadius = 8
-        powerStats.numberOfLines = 0
-        
+        heroAvatar.layer.cornerRadius = 8        
     }
     
 }
