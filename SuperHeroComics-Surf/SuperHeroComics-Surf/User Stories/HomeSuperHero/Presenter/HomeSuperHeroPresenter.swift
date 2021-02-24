@@ -25,7 +25,7 @@ final class HomeSuperHeroPresenter: HomeSuperHeroViewOutput, HomeSuperHeroModule
         }
     }
     
-    func show(heroes: [HeroList]) {
+    func show(heroes: HeroList) {
         router?.showDetailModule(heroes: heroes)
     }
 }
