@@ -21,8 +21,17 @@ final class DetailSuperHeroParametersTableViewCell: UITableViewCell {
         setApperance()
     }
     
-    func configure(with title: String?) {
+    func configure(with title: String?, with model: DetailSuperHeroParametersViewModel) {
         headerTitle.text = title
+        if let parameters = model.parameters {
+            parameters.forEach {
+                let label = UILabel()
+                label.text = $0
+                label.numberOfLines = 0
+                label.font = UIFont(name: "Gill Sans", size: 18)
+                parameterStackView.addArrangedSubview(label)
+            }
+        }
     }
     
     private func setApperance() {
