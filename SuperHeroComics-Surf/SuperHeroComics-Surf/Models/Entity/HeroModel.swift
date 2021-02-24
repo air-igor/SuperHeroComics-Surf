@@ -12,7 +12,7 @@ import Foundation
 
 struct HeroModel: Codable {
     let response, resultsFor: String?
-    let results: [HeroList]
+    let results: [HeroEntity]
     
     enum CodingKeys: String, CodingKey {
         case response
@@ -21,9 +21,9 @@ struct HeroModel: Codable {
     }
 }
 
-// MARK: - HeroList
+// MARK: - HeroEntity
 
-struct HeroList: Codable {
+struct HeroEntity: Codable {
     let id, name: String?
     let powerstats: Powerstats?
     let biography: Biography?
