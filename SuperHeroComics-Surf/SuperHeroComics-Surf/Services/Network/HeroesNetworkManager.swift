@@ -10,13 +10,17 @@ import Foundation
 
 final class HeroesNetworkManager {
     
+    // MARK: - Properties
+    
     static let shared = HeroesNetworkManager()
     typealias ErrorManager = (Errors) -> Void
+    
+    // MARK: - Private Properties
     
     private let session = URLSession(configuration: .default)
     private var dataTask: URLSessionDataTask?
     
-    func fetchRandomHeroesList(onCompletion: @escaping ([HeroList]) -> Void,
+    func fetchRandomHeroesList(onCompletion: @escaping ([HeroEntity]) -> Void,
                                onError: @escaping ErrorManager) {
         let mainUrl = UrlConfiguration.startUrl + UrlConfiguration.apiKey + UrlConfiguration.searchScheme + "\(randomHero(length: 1))"
         
@@ -42,9 +46,9 @@ final class HeroesNetworkManager {
     }
     
     func fetchHero(searchText: String,
-                   onCompletion: @escaping ([HeroList]) -> Void,
+                   onCompletion: @escaping ([HeroEntity]) -> Void,
                    onError: @escaping ErrorManager) {
-        let mainUrl = UrlConfiguration.startUrl + "\(searchText.replacingOccurrences(of: " ", with: "%20"))"
+        let mainUrl = UrlConfiguration.startUrl + UrlConfiguration.apiKey + UrlConfiguration.searchScheme + "\(searchText.replacingOccurrences(of: " ", with: "%20"))"
         
         guard let url = URL(string: mainUrl) else {
             return onError(.errorLink)
