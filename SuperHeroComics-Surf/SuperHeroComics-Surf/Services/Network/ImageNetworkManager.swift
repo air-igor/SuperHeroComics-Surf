@@ -10,13 +10,14 @@ import Foundation
 
 final class ImageNetworking: NSObject {
     
-    // MARK: - Private functions
+    // MARK: - Private Function
+    
     private static func getData(url: URL,
                                 completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     
-    // MARK: - Public function
+    // MARK: - Public Function
     
     public static func downloadImage(url: URL,
                                      completion: @escaping (Result<Data>) -> Void) {
