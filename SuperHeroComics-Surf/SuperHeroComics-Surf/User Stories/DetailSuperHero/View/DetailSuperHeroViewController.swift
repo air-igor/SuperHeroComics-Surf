@@ -31,7 +31,7 @@ final class DetailSuperHeroViewController: UIViewController, DetailSuperHeroView
     
     // MARK: - DetailSuperHeroViewInput
     
-    func configure(with heroes: [DetailSuperHeroViewModel]) {
+    func configure(with heroes: DetailSuperHeroViewModel) {
         adapter.configure(with: heroes)
     }
 
