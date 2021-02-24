@@ -38,7 +38,7 @@ struct DetailSuperHeroViewModel {
     var workParameters: DetailSuperHeroParametersViewModel? = nil
     var connectionsParamaters: DetailSuperHeroParametersViewModel? = nil
     
-    init(with entity: HeroList) {
+    init(with entity: HeroEntity) {
         if let name = entity.name {
             let powerStats = [
                 "Intelligence: \(entity.powerstats?.intelligence ?? "0")",

@@ -7,6 +7,6 @@
 //
 
 protocol HomeSuperHeroRouterInput {
-    func showDetailModule(heroes: HeroList)
+    func showDetailModule(heroes: HeroEntity)
     func showMessageModule(with message: String)
 }

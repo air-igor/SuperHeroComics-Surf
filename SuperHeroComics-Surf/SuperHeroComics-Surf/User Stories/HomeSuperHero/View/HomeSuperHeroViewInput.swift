@@ -7,5 +7,5 @@
 //
 
 protocol HomeSuperHeroViewInput: class {
-    func viewModel(array: [HeroList])
+    func viewModel(array: [HeroEntity])
 }

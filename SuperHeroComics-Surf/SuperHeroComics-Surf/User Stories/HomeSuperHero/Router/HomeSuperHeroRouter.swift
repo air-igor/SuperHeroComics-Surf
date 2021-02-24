@@ -16,7 +16,7 @@ final class HomeCocktailListRouter: HomeSuperHeroRouterInput {
     
     // MARK: - Internal methods
     
-    func showDetailModule(heroes: HeroList) {
+    func showDetailModule(heroes: HeroEntity) {
         self.view?.push(module: DetailSuperHeroModuleConfigurator.configure(heroes: heroes), animated: true)
     }
     

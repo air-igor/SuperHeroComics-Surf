@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeSuperHeroAdapterOutput {
-    func show(heroes: HeroList)
+    func show(heroes: HeroEntity)
 }
 
 final class HomeSuperHeroCollectionViewAdapter: NSObject {
@@ -17,8 +17,7 @@ final class HomeSuperHeroCollectionViewAdapter: NSObject {
     // MARK: - Private properties
     
     private let output: HomeSuperHeroAdapterOutput
-    
-    private var items: [HeroList] = []
+    private var items: [HeroEntity] = []
     private var collectionView: UICollectionView?
     
     // MARK: - Initialization
@@ -36,7 +35,7 @@ final class HomeSuperHeroCollectionViewAdapter: NSObject {
         self.collectionView?.dataSource = collectionView.dataSource
     }
     
-    func set(items: [HeroList]) {
+    func set(items: [HeroEntity]) {
         self.items = items
     }
     

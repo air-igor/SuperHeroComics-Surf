@@ -25,10 +25,11 @@ final class HomeSuperHeroViewController: UIViewController, HomeSuperHeroViewInpu
     var output: HomeSuperHeroViewOutput?
     
     
-    // MARK: - ViewController
+    // MARK: - UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Heroes"
         adapter?.set(collectionView: collectionView)
         collectionView.delegate = adapter
         collectionView.dataSource = adapter
@@ -45,7 +46,7 @@ final class HomeSuperHeroViewController: UIViewController, HomeSuperHeroViewInpu
     
     // MARK: - Internal methods
     
-    func viewModel(array: [HeroList]) {
+    func viewModel(array: [HeroEntity]) {
         adapter?.set(items: array)
         collectionView.reloadData()
         activityIndicator.stopAnimating()

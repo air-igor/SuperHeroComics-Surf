@@ -6,6 +6,6 @@
 //  Copyright © 2021 AirIgor. All rights reserved.
 //
 
-protocol DetailSuperHeroViewOutput {
+protocol DetailSuperHeroViewOutput: class {
     func viewLoaded()
 }

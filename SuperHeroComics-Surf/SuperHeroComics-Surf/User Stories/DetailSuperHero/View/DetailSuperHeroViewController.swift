@@ -34,5 +34,4 @@ final class DetailSuperHeroViewController: UIViewController, DetailSuperHeroView
     func configure(with heroes: DetailSuperHeroViewModel) {
         adapter.configure(with: heroes)
     }
-
 }
