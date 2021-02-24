@@ -36,24 +36,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrT-S2-F7m">
-                                <rect key="frame" x="138" y="32" width="162" height="152"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8Ng-dZ-1jK">
+                                <rect key="frame" x="138" y="36" width="164" height="148"/>
+                            </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="maQ-Lo-E7o" secondAttribute="trailing" constant="2" id="1xS-em-W4A"/>
-                            <constraint firstAttribute="trailing" secondItem="OrT-S2-F7m" secondAttribute="trailing" constant="2" id="54m-2I-hHz"/>
                             <constraint firstAttribute="bottom" secondItem="rVU-4r-KFI" secondAttribute="bottom" id="IR7-lQ-z5e"/>
+                            <constraint firstItem="8Ng-dZ-1jK" firstAttribute="leading" secondItem="rVU-4r-KFI" secondAttribute="trailing" constant="4" id="IoM-EH-eEo"/>
                             <constraint firstItem="rVU-4r-KFI" firstAttribute="top" secondItem="THJ-Fk-Gz0" secondAttribute="top" id="K9z-Dp-mm8"/>
                             <constraint firstItem="rVU-4r-KFI" firstAttribute="leading" secondItem="THJ-Fk-Gz0" secondAttribute="leading" id="Ohr-Nr-mCs"/>
-                            <constraint firstItem="OrT-S2-F7m" firstAttribute="top" secondItem="maQ-Lo-E7o" secondAttribute="bottom" id="bi9-U1-OMm"/>
-                            <constraint firstAttribute="bottom" secondItem="OrT-S2-F7m" secondAttribute="bottom" constant="15" id="oAl-fw-IHG"/>
+                            <constraint firstAttribute="bottom" secondItem="8Ng-dZ-1jK" secondAttribute="bottom" constant="15" id="aOa-Wp-5wv"/>
+                            <constraint firstItem="8Ng-dZ-1jK" firstAttribute="top" secondItem="maQ-Lo-E7o" secondAttribute="bottom" constant="4" id="d9x-qj-K3G"/>
                             <constraint firstItem="maQ-Lo-E7o" firstAttribute="top" secondItem="THJ-Fk-Gz0" secondAttribute="top" constant="3" id="uck-np-t1K"/>
                             <constraint firstItem="maQ-Lo-E7o" firstAttribute="leading" secondItem="rVU-4r-KFI" secondAttribute="trailing" constant="4" id="vfv-t4-Jmi"/>
-                            <constraint firstItem="OrT-S2-F7m" firstAttribute="leading" secondItem="rVU-4r-KFI" secondAttribute="trailing" constant="4" id="xuD-rV-bNh"/>
+                            <constraint firstAttribute="trailing" secondItem="8Ng-dZ-1jK" secondAttribute="trailing" id="yIz-9K-heo"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -69,9 +66,9 @@
                 <outlet property="heroAvatar" destination="rVU-4r-KFI" id="nQS-KF-vaJ"/>
                 <outlet property="heroName" destination="maQ-Lo-E7o" id="2ZI-11-gYK"/>
                 <outlet property="heroView" destination="THJ-Fk-Gz0" id="k09-dg-Hva"/>
-                <outlet property="powerStats" destination="OrT-S2-F7m" id="VM1-BI-rLv"/>
+                <outlet property="powerStatsStackView" destination="8Ng-dZ-1jK" id="aPh-cm-nWR"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="164.73214285714286"/>
+            <point key="canvasLocation" x="137.68115942028987" y="164.39732142857142"/>
         </tableViewCell>
     </objects>
 </document>
