@@ -13,6 +13,7 @@ enum TabBarItem: CaseIterable {
     // MARK: - Cases
     
     case home
+    case search
     
     // MARK: - Properties
     
@@ -20,6 +21,8 @@ enum TabBarItem: CaseIterable {
         switch self {
         case .home:
             return "Heroes"
+        case .search:
+            return "Search"
         }
     }
     
@@ -27,6 +30,8 @@ enum TabBarItem: CaseIterable {
         switch self {
         case .home:
             return UIImage(named: "homeIcon") ?? UIImage()
+        case .search:
+            return UIImage(named: "searchIcon") ?? UIImage()
         }
     }
 
