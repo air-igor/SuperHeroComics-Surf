@@ -9,18 +9,25 @@
 import UIKit
 
 final class DetailSuperHeroParametersTableViewCell: UITableViewCell {
-
+    
     // MARK: - IBOutlets
     
+    @IBOutlet private weak var parametersView: UIView!
     @IBOutlet private weak var headerTitle: UILabel!
     @IBOutlet private weak var parameterStackView: UIStackView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setApperance()
     }
     
-    func setParameters(with title: String?, with parameters: DetailSuperHeroViewModel) {
+    func configure(with title: String?) {
         headerTitle.text = title
+    }
+    
+    private func setApperance() {
+        parametersView.backgroundColor = UIColor.init(rgb: 0xF1F1F1)
+        parametersView.layer.cornerRadius = 8
     }
     
 }
