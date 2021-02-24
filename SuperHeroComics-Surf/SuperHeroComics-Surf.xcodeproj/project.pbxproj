@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3211646625E65AB200645B52 /* UIView + LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3211646525E65AB200645B52 /* UIView + LoadFromNib.swift */; };
 		3235350825E2B2EE0078FBF4 /* DetailSuperHeroParametersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3235350625E2B2EE0078FBF4 /* DetailSuperHeroParametersTableViewCell.swift */; };
 		3235350925E2B2EE0078FBF4 /* DetailSuperHeroParametersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3235350725E2B2EE0078FBF4 /* DetailSuperHeroParametersTableViewCell.xib */; };
 		3235350E25E2B4980078FBF4 /* UITableViewCell + RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3235350D25E2B4980078FBF4 /* UITableViewCell + RegisterCell.swift */; };
@@ -60,11 +61,13 @@
 		32D7741E25DD8D3800A63A9E /* DetailSuperHeroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D7741C25DD8D3800A63A9E /* DetailSuperHeroViewController.xib */; };
 		32D7742725DEBB0400A63A9E /* DetailSuperHeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D7742525DEBB0400A63A9E /* DetailSuperHeroTableViewCell.swift */; };
 		32D7742A25E03E8A00A63A9E /* UIColor + Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D7742925E03E8A00A63A9E /* UIColor + Hex.swift */; };
+		32E66CB725E530DF00414521 /* UICollectionViewCell + RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E66CB625E530DF00414521 /* UICollectionViewCell + RegisterCell.swift */; };
 		BCB4E6B1AD8FFEEDCEB9829F /* Pods_SuperHeroComics_Surf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4C0A519C009F7B60DE908D /* Pods_SuperHeroComics_Surf.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B4C0A519C009F7B60DE908D /* Pods_SuperHeroComics_Surf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperHeroComics_Surf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3211646525E65AB200645B52 /* UIView + LoadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + LoadFromNib.swift"; sourceTree = "<group>"; };
 		3235350625E2B2EE0078FBF4 /* DetailSuperHeroParametersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSuperHeroParametersTableViewCell.swift; sourceTree = "<group>"; };
 		3235350725E2B2EE0078FBF4 /* DetailSuperHeroParametersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailSuperHeroParametersTableViewCell.xib; sourceTree = "<group>"; };
 		3235350D25E2B4980078FBF4 /* UITableViewCell + RegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell + RegisterCell.swift"; sourceTree = "<group>"; };
@@ -141,6 +144,7 @@
 		32D7741C25DD8D3800A63A9E /* DetailSuperHeroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailSuperHeroViewController.xib; sourceTree = "<group>"; };
 		32D7742525DEBB0400A63A9E /* DetailSuperHeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSuperHeroTableViewCell.swift; sourceTree = "<group>"; };
 		32D7742925E03E8A00A63A9E /* UIColor + Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Hex.swift"; sourceTree = "<group>"; };
+		32E66CB625E530DF00414521 /* UICollectionViewCell + RegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell + RegisterCell.swift"; sourceTree = "<group>"; };
 		3CF600651A2B9832D0522D7B /* Pods-SuperHeroComics-Surf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroComics-Surf.debug.xcconfig"; path = "Target Support Files/Pods-SuperHeroComics-Surf/Pods-SuperHeroComics-Surf.debug.xcconfig"; sourceTree = "<group>"; };
 		C748EAC4CFB26D182E3C7F9C /* Pods-SuperHeroComics-Surf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperHeroComics-Surf.release.xcconfig"; path = "Target Support Files/Pods-SuperHeroComics-Surf/Pods-SuperHeroComics-Surf.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -365,8 +369,10 @@
 			children = (
 				3272105625DACBED00F67BF5 /* .gitkeep */,
 				327210A225DADED700F67BF5 /* UIImageVIew + Cache.swift */,
+				32E66CB625E530DF00414521 /* UICollectionViewCell + RegisterCell.swift */,
 				3235350D25E2B4980078FBF4 /* UITableViewCell + RegisterCell.swift */,
 				32D7742925E03E8A00A63A9E /* UIColor + Hex.swift */,
+				3211646525E65AB200645B52 /* UIView + LoadFromNib.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -766,6 +772,7 @@
 				32D7742725DEBB0400A63A9E /* DetailSuperHeroTableViewCell.swift in Sources */,
 				3272106A25DACBED00F67BF5 /* Fonts.swift in Sources */,
 				32D7740A25DD825D00A63A9E /* DetailSuperHeroRouterInput.swift in Sources */,
+				3211646625E65AB200645B52 /* UIView + LoadFromNib.swift in Sources */,
 				3272109D25DADBBC00F67BF5 /* Errors.swift in Sources */,
 				32D7741D25DD8D3800A63A9E /* DetailSuperHeroViewController.swift in Sources */,
 				32D7740C25DD82D800A63A9E /* DetailSuperHeroModuleOutput.swift in Sources */,
@@ -786,6 +793,7 @@
 				327210AB25DAE4C800F67BF5 /* HomeSuperHeroModuleOutput.swift in Sources */,
 				3272109025DAD5C900F67BF5 /* HomeSuperHeroCollectionViewCell.swift in Sources */,
 				32D7740025DD7BCA00A63A9E /* DetailSuperHeroViewInput.swift in Sources */,
+				32E66CB725E530DF00414521 /* UICollectionViewCell + RegisterCell.swift in Sources */,
 				3272106325DACBED00F67BF5 /* AppDelegate.swift in Sources */,
 				3257271125E18D400019A24C /* DetailSuperHeroViewModel.swift in Sources */,
 				327210A725DAE4A300F67BF5 /* HomeSuperHeroPresenter.swift in Sources */,
