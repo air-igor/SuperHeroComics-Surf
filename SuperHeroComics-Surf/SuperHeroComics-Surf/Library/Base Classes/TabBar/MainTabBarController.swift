@@ -28,6 +28,9 @@ private extension MainTabBarController {
         case .home:
             let view = HomeSuperHeroModuleConfigurator().configure()
             return makeRootNavigationController(with: view, title: type.title, image: type.image)
+        case .search:
+            let view = UIViewController()
+            return makeRootNavigationController(with: view, title: type.title, image: type.image)
         }
     }
     
@@ -36,6 +39,7 @@ private extension MainTabBarController {
                                       image: UIImage) -> UINavigationController {
         let navigationController = UINavigationController(rootViewController: rootViewController)
         navigationController.tabBarItem.image = image
+        navigationController.tabBarItem.title = title
         rootViewController.tabBarItem.title = title
         tabBar.tintColor = .black
         
