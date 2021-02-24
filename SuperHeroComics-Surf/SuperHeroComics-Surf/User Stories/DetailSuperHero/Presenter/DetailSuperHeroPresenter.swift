@@ -17,11 +17,11 @@ final class DetailSuperHeroPresenter: DetailSuperHeroViewOutput, DetailSuperHero
     
     // MARK: - Private Properties
     
-    private let heroes: HeroList
+    private let heroes: HeroEntity
     
     // MARK: - Initialization
     
-    init(with heroes: HeroList) {
+    init(with heroes: HeroEntity) {
         self.heroes = heroes
     }
     
