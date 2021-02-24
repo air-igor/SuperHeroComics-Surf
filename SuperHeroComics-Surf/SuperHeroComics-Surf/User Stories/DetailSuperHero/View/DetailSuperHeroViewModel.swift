@@ -8,86 +8,51 @@
 
 import Foundation
 
-struct DetailSuperHeroViewModel {
+struct DetailSuperHeroHeaderViewModel {
+    let avatar: String?
+    let name: String?
+    let powerStats: [String]?
     
-    let heroAvatar: String?
-    let heroName: String?
-    let heroPowerStats: String?
-    let heroAlterEgos: String?
-    let heroPublisher: String?
-    let heroFirstApperance: String?
-    let heroOccupation: String?
-    let heroRelatives: String?
-    let heroGroupAffiliation: String?
-    let heroBase: String?
-    let heroPlaceOfBirth: String?
-//    let headerModel: DetailSuperHeroHeaderViewModel?
-//    let detailSuperHeroAdditonalModel: DetailSuperHeroAdditonalModel?
-    
-    init(with entity: HeroList) {
-        heroAvatar = entity.image?.url
-        heroName = entity.name
-        heroPowerStats = """
-        Intelligence: \(entity.powerstats?.intelligence ?? "0")
-        Strength: \(entity.powerstats?.strength ?? "0")
-        Speed: \(entity.powerstats?.speed ?? "0")
-        Durability: \(entity.powerstats?.durability ?? "0")
-        Power: \(entity.powerstats?.power ?? "0")
-        Combat: \(entity.powerstats?.combat ?? "0")
-        """
-        heroAlterEgos = "Alter Egos: \n\(entity.biography?.alterEgos ?? "Unknown")"
-        
-        if entity.biography?.publisher == "-" {
-            heroPublisher = "Publisher: \nUnknown"
-        } else {
-            heroPublisher = "Publisher: \n\(entity.biography?.publisher ?? "")"
-        }
-        
-        if entity.biography?.firstAppearance == "-" {
-            heroFirstApperance = "First appereance: \nUnknown"
-        } else {
-            heroFirstApperance = "First appereance: \n\(entity.biography?.firstAppearance ?? "")"
-        }
-        
-        if entity.work?.occupation == "-" {
-            heroOccupation = "Occupation: \nUnknown"
-        } else {
-            heroOccupation = "Occupation: \n\(entity.work?.occupation ?? "")"
-        }
-        
-        if entity.connections?.relatives == "-" {
-            heroRelatives = "Relatives: \nUnknown"
-        } else {
-            heroRelatives = "Relatives: \n\(entity.connections?.relatives ?? "")"
-        }
-        
-        if entity.connections?.groupAffiliation == "-" {
-            heroGroupAffiliation = "Group Affiliation: \nUnknown"
-        } else {
-            heroGroupAffiliation = "Group Affiliation: \n\(entity.connections?.groupAffiliation ?? "")"
-        }
-        
-        if entity.work?.base == "-" {
-            heroBase = "Base: \nUnknown"
-        } else {
-            heroBase = "Base: \n\(entity.work?.base ?? "")"
-        }
-        
-        if entity.biography?.placeOfBirth == "-" {
-            heroPlaceOfBirth = "Place of birth: \nUnknown"
-        } else {
-            heroPlaceOfBirth = "Place of birth: \n\(entity.biography?.placeOfBirth ?? "")"
-        }
+    init(avatar: String? = nil, name: String?, powerStats: [String]? = nil) {
+        self.avatar = avatar
+        self.name = name
+        self.powerStats = powerStats
     }
     
 }
 
-//struct DetailSuperHeroHeaderViewModel {
-//    let title: String?
-//    let image: String?
-//    let powerStats: [String]?
-//}
-//
-//struct DetailSuperHeroAdditonalModel {
-//
-//}
+struct DetailSuperHeroParametersViewModel {
+    let title: String?
+    
+    init(title: String? = nil) {
+        self.title = title
+    }
+}
+
+
+struct DetailSuperHeroViewModel {
+    var header: DetailSuperHeroHeaderViewModel? = nil
+    let biographyParameters: DetailSuperHeroParametersViewModel?
+    let workParameters: DetailSuperHeroParametersViewModel?
+    let connectionsParamaters: DetailSuperHeroParametersViewModel?
+    
+    init(with entity: HeroList) {
+        if let name = entity.name {
+            let powerStats = [
+                "Intelligence: \(entity.powerstats?.intelligence ?? "0")",
+                "Strength: \(entity.powerstats?.strength ?? "0")",
+                "Speed: \(entity.powerstats?.speed ?? "0")",
+                "Durability: \(entity.powerstats?.durability ?? "0")",
+                "Power: \(entity.powerstats?.power ?? "0")",
+                "Combat: \(entity.powerstats?.combat ?? "0")"
+            ]
+            self.header = .init(avatar: entity.image?.url,
+                                name: name,
+                                powerStats: powerStats)
+        }
+        
+        self.biographyParameters = .init(title: "Biography")
+        self.workParameters = .init(title: "Work")
+        self.connectionsParamaters = .init(title: "Connections")
+    }
+}
