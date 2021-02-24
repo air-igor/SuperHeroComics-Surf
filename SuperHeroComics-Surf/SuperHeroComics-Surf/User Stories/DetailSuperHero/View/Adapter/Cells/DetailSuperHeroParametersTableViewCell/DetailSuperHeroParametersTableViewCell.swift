@@ -35,7 +35,7 @@ final class DetailSuperHeroParametersTableViewCell: UITableViewCell {
     }
     
     private func setApperance() {
-        parametersView.backgroundColor = UIColor.init(rgb: 0xF1F1F1)
+        parametersView.backgroundColor = UIColor().heroCustomViewColor
         parametersView.layer.cornerRadius = 8
     }
     
