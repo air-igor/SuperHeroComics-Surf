@@ -21,7 +21,7 @@ final class HomeSuperHeroPresenter: HomeSuperHeroViewOutput, HomeSuperHeroModule
         HeroesNetworkManager.shared.fetchRandomHeroesList(onCompletion: { [weak self] (HeroesList) in
             self?.view?.viewModel(array: HeroesList)
         }) { (OnError) in
-            self.router?.showMessageModule(with: "\(OnError.localizedDescription)")
+            self.router?.showMessageModule(with: "Internet error: \n\(OnError.localizedDescription)")
         }
     }
     
