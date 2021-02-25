@@ -16,13 +16,14 @@ final class SearchSuperHeroViewController: UIViewController, SearchSuperHeroView
     
     // MARK: - Properties
     
+    var adapterOutput: SearchSuperHeroTableViewAdapterOutput?
     var output: SearchSuperHeroViewOutput?
     
     // MARK: - Private Properties
     
     private var timer: Timer?
     private let searchController = UISearchController(searchResultsController: nil)
-    private lazy var adapter = SearchSuperHeroTableViewAdapter(tableView: tableView)
+    private lazy var adapter = SearchSuperHeroTableViewAdapter(tableView: tableView, output: adapterOutput)
     
     // MARK: - UIViewController
     
@@ -37,6 +38,7 @@ final class SearchSuperHeroViewController: UIViewController, SearchSuperHeroView
     func configure(with heroes: [HeroEntity]) {
         adapter.configure(with: heroes)
     }
+    
     
 }
 
