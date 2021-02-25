@@ -8,23 +8,23 @@
 
 import UIKit
 
-//protocol SearchSuperHeroTableViewAdapterOutput {
-//    func show(heroes: HeroEntity)
-//}
+protocol SearchSuperHeroTableViewAdapterOutput {
+    func show(heroes: HeroEntity)
+}
 
 final class SearchSuperHeroTableViewAdapter: NSObject {
     
     // MARK: - Private Properties
     
-//    private let output: SearchSuperHeroTableViewAdapterOutput
+    private let output: SearchSuperHeroTableViewAdapterOutput?
     
     private var items: [HeroEntity] = []
     private var tableView: UITableView
     
     // MARK: - Initialization
     
-    init(tableView: UITableView) {
-//        self.output = output
+    init(tableView: UITableView, output: SearchSuperHeroTableViewAdapterOutput?) {
+        self.output = output
         self.tableView = tableView
         super.init()
         configureTable()
@@ -59,7 +59,7 @@ extension SearchSuperHeroTableViewAdapter: UITableViewDataSource {
 
 extension SearchSuperHeroTableViewAdapter: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.output.show(heroes: items[indexPath.row])
+        self.output?.show(heroes: items[indexPath.row])
     }
 }
 
