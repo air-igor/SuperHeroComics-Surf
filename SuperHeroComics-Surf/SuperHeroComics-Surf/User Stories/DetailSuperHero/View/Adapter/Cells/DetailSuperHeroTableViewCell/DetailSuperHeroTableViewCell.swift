@@ -38,6 +38,8 @@ final class DetailSuperHeroTableViewCell: UITableViewCell {
         
     }
     
+    // MARK: - Private Func
+    
     private func setApperance() {
         heroView.backgroundColor = UIColor().heroCustomViewColor
         heroView.layer.cornerRadius = 8
