@@ -6,7 +6,7 @@
 //  Copyright © 2021 AirIgor. All rights reserved.
 //
 
-final class SearchSuperHeroPresenter: SearchSuperHeroViewOutput, SearchSuperHeroModuleInput {
+final class SearchSuperHeroPresenter: SearchSuperHeroViewOutput, SearchSuperHeroModuleInput, SearchSuperHeroTableViewAdapterOutput {
     
     // MARK: - Properties
     
@@ -14,7 +14,7 @@ final class SearchSuperHeroPresenter: SearchSuperHeroViewOutput, SearchSuperHero
     var router: SearchSuperHeroRouterInput?
     var output: SearchSuperHeroModuleOutput?
     
-    // MARK: - DetailModuleInput
+    // MARK: - Internal Methods
     
     func configure(with text: String) {
         HeroesNetworkManager.shared.fetchHero(searchText: text, onCompletion: { [weak self] (Result) in
@@ -24,4 +24,9 @@ final class SearchSuperHeroPresenter: SearchSuperHeroViewOutput, SearchSuperHero
         }
     }
     
+    func show(heroes: HeroEntity) {
+        router?.showDetailModule(heroes: heroes)
+       }
+    
 }
+
