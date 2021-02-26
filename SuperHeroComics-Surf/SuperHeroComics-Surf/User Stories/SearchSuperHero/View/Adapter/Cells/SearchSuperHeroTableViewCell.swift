@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 final class SearchSuperHeroTableViewCell: UITableViewCell {
     
@@ -25,8 +26,8 @@ final class SearchSuperHeroTableViewCell: UITableViewCell {
     // MARK: - Internal methods
     
     func configure(with model: HeroEntity) {
-        guard let url = model.image?.url else { return }
-        heroAvatarImageView.loadImage(urlString: url)
+        guard let url = URL(string: model.image?.url ?? "") else { return }
+        heroAvatarImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "noAvatar"), options: .delayPlaceholder, completed: nil)
         heroNameLabel.text = model.name
     }
     

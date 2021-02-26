@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 final class DetailSuperHeroTableViewCell: UITableViewCell {
     
@@ -24,8 +25,8 @@ final class DetailSuperHeroTableViewCell: UITableViewCell {
     }
     
     func configure(with model: DetailSuperHeroHeaderViewModel) {
-        guard let url = model.avatar else { return }
-        heroAvatar.loadImage(urlString: url)
+        guard let url = URL(string: model.avatar ?? "") else { return }
+        heroAvatar.sd_setImage(with: url, placeholderImage: UIImage(named: "noAvatar"), options: .continueInBackground, completed: nil)
         heroName.text = model.name
         if let powerStats = model.powerStats {
             powerStats.forEach {
