@@ -31,7 +31,9 @@ struct HeroEntity: Codable {
     let work: Work?
     let connections: Connections?
     let image: Image?
+    
 }
+
 
 // MARK: - Appearance
 
@@ -90,4 +92,11 @@ struct Powerstats: Codable {
 
 struct Work: Codable {
     let occupation, base: String?
+}
+
+// MARK: - MiniHeroEntity
+
+struct MiniHeroEntity {
+    let name: String?
+    let image: String?
 }
