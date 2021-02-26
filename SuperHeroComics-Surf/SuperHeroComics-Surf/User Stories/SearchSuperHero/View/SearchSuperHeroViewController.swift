@@ -23,6 +23,7 @@ final class SearchSuperHeroViewController: UIViewController, SearchSuperHeroView
     
     private var timer: Timer?
     private let searchController = UISearchController(searchResultsController: nil)
+    
     private lazy var adapter = SearchSuperHeroTableViewAdapter(tableView: tableView, output: adapterOutput)
     
     // MARK: - UIViewController

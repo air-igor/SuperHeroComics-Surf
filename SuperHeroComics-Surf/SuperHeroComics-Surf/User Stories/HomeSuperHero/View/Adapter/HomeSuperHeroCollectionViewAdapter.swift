@@ -86,7 +86,7 @@ private extension HomeSuperHeroCollectionViewAdapter {
         collectionView?.registerCell(type: HomeSuperHeroCollectionViewCell.self)
         collectionView?.delegate = self
         collectionView?.dataSource = self
-        collectionView?.showsVerticalScrollIndicator = true
+        collectionView?.showsVerticalScrollIndicator = false
         collectionView?.showsHorizontalScrollIndicator = false
     }
     
