@@ -19,6 +19,7 @@
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal static let homeIcon = ImageAsset(name: "homeIcon")
+  internal static let noAvatar = ImageAsset(name: "noAvatar")
   internal static let searchIcon = ImageAsset(name: "searchIcon")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
