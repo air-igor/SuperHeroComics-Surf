@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3211646625E65AB200645B52 /* UIView + LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3211646525E65AB200645B52 /* UIView + LoadFromNib.swift */; };
+		3220F8B525E9584000539D16 /* MainDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3220F8B425E9584000539D16 /* MainDatabaseService.swift */; };
+		3220F8B725E95AB900539D16 /* HeroesEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3220F8B625E95AB900539D16 /* HeroesEntry.swift */; };
+		3220F8B925E95DB200539D16 /* HeroesDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3220F8B825E95DB200539D16 /* HeroesDatabaseService.swift */; };
 		3235350825E2B2EE0078FBF4 /* DetailSuperHeroParametersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3235350625E2B2EE0078FBF4 /* DetailSuperHeroParametersTableViewCell.swift */; };
 		3235350925E2B2EE0078FBF4 /* DetailSuperHeroParametersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3235350725E2B2EE0078FBF4 /* DetailSuperHeroParametersTableViewCell.xib */; };
 		3235350E25E2B4980078FBF4 /* UITableViewCell + RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3235350D25E2B4980078FBF4 /* UITableViewCell + RegisterCell.swift */; };
@@ -81,6 +84,9 @@
 /* Begin PBXFileReference section */
 		0B4C0A519C009F7B60DE908D /* Pods_SuperHeroComics_Surf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperHeroComics_Surf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3211646525E65AB200645B52 /* UIView + LoadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + LoadFromNib.swift"; sourceTree = "<group>"; };
+		3220F8B425E9584000539D16 /* MainDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDatabaseService.swift; sourceTree = "<group>"; };
+		3220F8B625E95AB900539D16 /* HeroesEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesEntry.swift; sourceTree = "<group>"; };
+		3220F8B825E95DB200539D16 /* HeroesDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesDatabaseService.swift; sourceTree = "<group>"; };
 		3235350625E2B2EE0078FBF4 /* DetailSuperHeroParametersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSuperHeroParametersTableViewCell.swift; sourceTree = "<group>"; };
 		3235350725E2B2EE0078FBF4 /* DetailSuperHeroParametersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailSuperHeroParametersTableViewCell.xib; sourceTree = "<group>"; };
 		3235350D25E2B4980078FBF4 /* UITableViewCell + RegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell + RegisterCell.swift"; sourceTree = "<group>"; };
@@ -187,6 +193,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3220F8B325E957ED00539D16 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				3220F8B425E9584000539D16 /* MainDatabaseService.swift */,
+				3220F8B825E95DB200539D16 /* HeroesDatabaseService.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		3235350C25E2B4380078FBF4 /* DetailSuperHeroParametersTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +360,7 @@
 		3272104025DACBED00F67BF5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3220F8B325E957ED00539D16 /* Database */,
 				3272108325DAD07F00F67BF5 /* Network */,
 				3272104125DACBED00F67BF5 /* .gitkeep */,
 			);
@@ -424,6 +440,7 @@
 			isa = PBXGroup;
 			children = (
 				3272104F25DACBED00F67BF5 /* .gitkeep */,
+				3220F8B625E95AB900539D16 /* HeroesEntry.swift */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -870,6 +887,7 @@
 				32558B2B25E6DECF00A47A42 /* SearchSuperHeroPresenter.swift in Sources */,
 				327210A325DADED700F67BF5 /* UIImageVIew + Cache.swift in Sources */,
 				32D7740525DD7CDC00A63A9E /* DetailSuperHeroTableViewAdapter.swift in Sources */,
+				3220F8B525E9584000539D16 /* MainDatabaseService.swift in Sources */,
 				3272106F25DACBED00F67BF5 /* Colors.swift in Sources */,
 				32D7742725DEBB0400A63A9E /* DetailSuperHeroTableViewCell.swift in Sources */,
 				32558B2325E6D95D00A47A42 /* SearchSuperHeroViewInput.swift in Sources */,
@@ -878,6 +896,7 @@
 				32558B2D25E6E03000A47A42 /* SearchSuperHeroRouter.swift in Sources */,
 				3211646625E65AB200645B52 /* UIView + LoadFromNib.swift in Sources */,
 				3272109D25DADBBC00F67BF5 /* Errors.swift in Sources */,
+				3220F8B925E95DB200539D16 /* HeroesDatabaseService.swift in Sources */,
 				32D7741D25DD8D3800A63A9E /* DetailSuperHeroViewController.swift in Sources */,
 				32558B2725E6DD8C00A47A42 /* SearchSuperHeroModuleInput.swift in Sources */,
 				32D7740C25DD82D800A63A9E /* DetailSuperHeroModuleOutput.swift in Sources */,
@@ -901,6 +920,7 @@
 				32D7740025DD7BCA00A63A9E /* DetailSuperHeroViewInput.swift in Sources */,
 				32E66CB725E530DF00414521 /* UICollectionViewCell + RegisterCell.swift in Sources */,
 				3272106325DACBED00F67BF5 /* AppDelegate.swift in Sources */,
+				3220F8B725E95AB900539D16 /* HeroesEntry.swift in Sources */,
 				3257271125E18D400019A24C /* DetailSuperHeroViewModel.swift in Sources */,
 				327210A725DAE4A300F67BF5 /* HomeSuperHeroPresenter.swift in Sources */,
 				32558B2925E6DD9A00A47A42 /* SearchSuperHeroModuleOutput.swift in Sources */,
