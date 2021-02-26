@@ -20,7 +20,9 @@ final class HomeSuperHeroModuleConfigurator {
             presenter.view = view
             presenter.router = router
             presenter.output = output
+            
             router.view = view
+            
             view.output = presenter
             view.adapterOutput = presenter
             
