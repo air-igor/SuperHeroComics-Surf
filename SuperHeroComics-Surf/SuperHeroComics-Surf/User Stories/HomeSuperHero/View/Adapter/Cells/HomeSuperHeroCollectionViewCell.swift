@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 final class HomeSuperHeroCollectionViewCell: UICollectionViewCell {
     
@@ -21,18 +22,22 @@ final class HomeSuperHeroCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setStyle()
+        setApperance()
     }
     
+    // MARK: - Internal Methods
+    
     func configureCell(heroes: HeroEntity) {
-        guard let avatarUrl = heroes.image?.url else { return }
+        guard let avatarUrl = URL(string: heroes.image?.url ?? "") else { return }
         HeroName.text = heroes.name
-        heroAvatar.loadImage(urlString: avatarUrl)
+        heroAvatar.sd_setImage(with: avatarUrl, placeholderImage: UIImage(named: "noAvatar"), options: .continueInBackground, completed: nil)
+        
     }
-
-    private func setStyle() {
+    
+    // MARK: - Private Funcs
+    
+    private func setApperance() {
         heroAvatar.contentMode = .scaleAspectFill
         heroAvatar.layer.cornerRadius = heroAvatar.frame.height / 2
     }
-    
 }
