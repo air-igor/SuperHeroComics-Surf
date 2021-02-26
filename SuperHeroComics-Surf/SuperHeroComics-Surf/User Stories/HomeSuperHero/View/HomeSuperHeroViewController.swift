@@ -16,12 +16,13 @@ final class HomeSuperHeroViewController: UIViewController, HomeSuperHeroViewInpu
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Private properties
-
+    
     private let refreshControl = UIRefreshControl()
+    private lazy var adapter = HomeSuperHeroCollectionViewAdapter(collectionView: collectionView, output: adapterOutput)
     
     // MARK: - Properties
     
-    var adapter: HomeSuperHeroCollectionViewAdapter?
+    var adapterOutput: HomeSuperHeroAdapterOutput?
     var output: HomeSuperHeroViewOutput?
     
     
@@ -30,9 +31,6 @@ final class HomeSuperHeroViewController: UIViewController, HomeSuperHeroViewInpu
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Heroes"
-        adapter?.set(collectionView: collectionView)
-        collectionView.delegate = adapter
-        collectionView.dataSource = adapter
         activityIndicator.startAnimating()
         output?.configure()
         collectionView.addSubview(refreshControl)
@@ -47,8 +45,7 @@ final class HomeSuperHeroViewController: UIViewController, HomeSuperHeroViewInpu
     // MARK: - Internal methods
     
     func viewModel(array: [HeroEntity]) {
-        adapter?.set(items: array)
-        collectionView.reloadData()
+        adapter.configure(with: array)
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
         refreshControl.endRefreshing()

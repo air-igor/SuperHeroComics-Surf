@@ -16,33 +16,26 @@ final class HomeSuperHeroCollectionViewAdapter: NSObject {
     
     // MARK: - Private properties
     
-    private let output: HomeSuperHeroAdapterOutput
+    private let output: HomeSuperHeroAdapterOutput?
     private var items: [HeroEntity] = []
     private var collectionView: UICollectionView?
     
     // MARK: - Initialization
     
-    init(output: HomeSuperHeroAdapterOutput) {
+    init(collectionView: UICollectionView?, output: HomeSuperHeroAdapterOutput?) {
         self.output = output
-        
-    }
-    
-    func set(collectionView: UICollectionView) {
-        collectionView.registerCell(type: HomeSuperHeroCollectionViewCell.self)
         self.collectionView = collectionView
+        super.init()
         configureTable()
-        self.collectionView?.delegate = collectionView.delegate
-        self.collectionView?.dataSource = collectionView.dataSource
     }
     
-    func set(items: [HeroEntity]) {
+    // MARK: - Internal methods
+    
+    func configure(with items: [HeroEntity]) {
         self.items = items
+        collectionView?.reloadData()
     }
     
-    func configureTable() {
-        collectionView?.showsVerticalScrollIndicator = false
-        collectionView?.showsHorizontalScrollIndicator = false
-    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -69,7 +62,7 @@ extension HomeSuperHeroCollectionViewAdapter: UICollectionViewDataSource {
 
 extension HomeSuperHeroCollectionViewAdapter: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.output.show(heroes: items[indexPath.row])
+        self.output?.show(heroes: items[indexPath.row])
     }
 }
 
@@ -83,4 +76,18 @@ extension HomeSuperHeroCollectionViewAdapter: UICollectionViewDelegateFlowLayout
             return CGSize(width: 0, height: 0)
         }
     }
+}
+
+// MARK: - Private Methods
+
+private extension HomeSuperHeroCollectionViewAdapter {
+    
+    func configureTable() {
+        collectionView?.registerCell(type: HomeSuperHeroCollectionViewCell.self)
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
+        collectionView?.showsVerticalScrollIndicator = true
+        collectionView?.showsHorizontalScrollIndicator = false
+    }
+    
 }

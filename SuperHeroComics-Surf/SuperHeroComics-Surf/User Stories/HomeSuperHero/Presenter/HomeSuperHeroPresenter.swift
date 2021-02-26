@@ -13,7 +13,6 @@ final class HomeSuperHeroPresenter: HomeSuperHeroViewOutput, HomeSuperHeroModule
     var view: HomeSuperHeroViewInput?
     var router: HomeSuperHeroRouterInput?
     var output: HomeSuperHeroModuleOutput?
-    var adapter: HomeSuperHeroCollectionViewAdapter?
     
     // MARK: - Internal methods
     

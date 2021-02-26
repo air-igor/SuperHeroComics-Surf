@@ -22,7 +22,7 @@ final class HomeSuperHeroModuleConfigurator {
             presenter.output = output
             router.view = view
             view.output = presenter
-            view.adapter = HomeSuperHeroCollectionViewAdapter(output: presenter)
+            view.adapterOutput = presenter
             
             return view
     }
