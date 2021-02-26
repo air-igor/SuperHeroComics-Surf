@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 final class HeroesNetworkManager {
     
@@ -19,6 +20,8 @@ final class HeroesNetworkManager {
     
     private let session = URLSession(configuration: .default)
     private var dataTask: URLSessionDataTask?
+    
+    // MARK: - Internal Methods
     
     func fetchRandomHeroesList(onCompletion: @escaping ([HeroEntity]) -> Void,
                                onError: @escaping ErrorManager) {
