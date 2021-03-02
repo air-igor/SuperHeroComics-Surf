@@ -7,5 +7,5 @@
 //
 
 protocol SearchSuperHeroViewInput: class {
-    func configure(with heroes: [HeroEntity])
+    func configure(with heroes: [SearchSuperHeroViewModel])
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2021 AirIgor. All rights reserved.
 //
 
-final class SearchSuperHeroPresenter: SearchSuperHeroViewOutput, SearchSuperHeroModuleInput, SearchSuperHeroTableViewAdapterOutput {
+final class SearchSuperHeroPresenter: SearchSuperHeroViewOutput, SearchSuperHeroModuleInput {
     
     // MARK: - Properties
     
@@ -14,19 +14,34 @@ final class SearchSuperHeroPresenter: SearchSuperHeroViewOutput, SearchSuperHero
     var router: SearchSuperHeroRouterInput?
     var output: SearchSuperHeroModuleOutput?
     
-    // MARK: - Internal Methods
+    // MARK: - Private Properties
+    
+    private var heroEntites: [HeroEntity] = []
+    
+    // MARK: - SearchSuperHeroViewOutput
     
     func configure(with text: String) {
-        HeroesNetworkManager.shared.fetchHero(searchText: text, onCompletion: { [weak self] (Result) in
-            self?.view?.configure(with: Result)
+        HeroesNetworkManager.shared.fetchHero(searchText: text, onCompletion: { [weak self] result in
+            self?.heroEntites = result
+            self?.view?.configure(with: result.map { SearchSuperHeroViewModel(with: $0)
+            })
         }) { (onError) in
             print(onError.localizedDescription)
         }
     }
-    
-    func show(heroes: HeroEntity) {
-        router?.showDetailModule(heroes: heroes)
-       }
-    
-}
 
+    func heroSelected(hero: SearchSuperHeroViewModel) {
+        guard let heroEntity = heroEntites.first(where: { $0.id == hero.id }) else {
+            return
+        }
+        router?.showDetailModule(with: heroEntity)
+    }
+    
+    func addToFavorite(hero: SearchSuperHeroViewModel) {
+        guard let heroEntity = heroEntites.first(where: { $0.id == hero.id }) else {
+            return
+        }
+        HeroesDatabaseService.heroDatabaseShared.update(heroEntity.toEntry())
+    }
+
+}

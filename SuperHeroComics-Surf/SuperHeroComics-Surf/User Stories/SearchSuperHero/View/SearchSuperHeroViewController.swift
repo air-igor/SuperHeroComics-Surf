@@ -15,8 +15,7 @@ final class SearchSuperHeroViewController: UIViewController, SearchSuperHeroView
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
-    
-    var adapterOutput: SearchSuperHeroTableViewAdapterOutput?
+
     var output: SearchSuperHeroViewOutput?
     
     // MARK: - Private Properties
@@ -24,7 +23,7 @@ final class SearchSuperHeroViewController: UIViewController, SearchSuperHeroView
     private var timer: Timer?
     private let searchController = UISearchController(searchResultsController: nil)
     
-    private lazy var adapter = SearchSuperHeroTableViewAdapter(tableView: tableView, output: adapterOutput)
+    private lazy var adapter = SearchSuperHeroTableViewAdapter(tableView: tableView, output: self)
     
     // MARK: - UIViewController
     
@@ -36,11 +35,25 @@ final class SearchSuperHeroViewController: UIViewController, SearchSuperHeroView
     
     // MARK: Internal Methods
     
-    func configure(with heroes: [HeroEntity]) {
+    func configure(with heroes: [SearchSuperHeroViewModel]) {
         adapter.configure(with: heroes)
     }
     
     
+}
+
+// MARK: - SearchSuperHeroTableViewAdapterOutput
+
+extension SearchSuperHeroViewController: SearchSuperHeroTableViewAdapterOutput {
+    
+    func heroSelected(hero: SearchSuperHeroViewModel) {
+        output?.heroSelected(hero: hero)
+    }
+    
+    func addToFavorite(hero: SearchSuperHeroViewModel) {
+        output?.addToFavorite(hero: hero)
+    }
+
 }
 
 // MARK: - UISearchBarDelegate

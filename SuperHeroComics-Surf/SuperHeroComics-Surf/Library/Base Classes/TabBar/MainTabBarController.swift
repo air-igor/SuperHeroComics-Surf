@@ -31,6 +31,9 @@ private extension MainTabBarController {
         case .search:
             let view = SearchSuperHeroModuleConfigurator().configure()
             return makeRootNavigationController(with: view, title: type.title, image: type.image)
+        case .favorite:
+            let view = FavoriteSuperHeroModuleConfigurator().configure()
+            return makeRootNavigationController(with: view, title: type.title, image: type.image)
         }
     }
     

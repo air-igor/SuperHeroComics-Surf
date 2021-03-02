@@ -17,18 +17,18 @@ final class DetailSuperHeroPresenter: DetailSuperHeroViewOutput, DetailSuperHero
     
     // MARK: - Private Properties
     
-    private let heroes: HeroEntity
+    private let hero: HeroEntity
     
     // MARK: - Initialization
     
-    init(with heroes: HeroEntity) {
-        self.heroes = heroes
+    init(with hero: HeroEntity) {
+        self.hero = hero
     }
     
     // MARK: - DetailModuleInput
     
     func viewLoaded() {
-        view?.configure(with: DetailSuperHeroViewModel(with: heroes))
+        view?.configure(with: DetailSuperHeroViewModel(with: hero))
     }
     
     

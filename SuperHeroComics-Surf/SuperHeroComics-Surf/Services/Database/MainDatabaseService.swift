@@ -21,6 +21,7 @@ class MainDatabaseService {
         do {
             try realm.write {
                 realm.add(object, update: .modified)
+                print("success")
             }
         } catch {
             print("Eror update \(error)")

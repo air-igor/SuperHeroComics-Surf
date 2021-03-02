@@ -16,8 +16,8 @@ final class SearchSuperHeroRouter: SearchSuperHeroRouterInput {
     
     // MARK: - Internal methods
     
-    func showDetailModule(heroes: HeroEntity) {
-        self.view?.push(module: DetailSuperHeroModuleConfigurator.configure(heroes: heroes), animated: true)
+    func showDetailModule(with hero: HeroEntity) {
+        self.view?.push(module: DetailSuperHeroModuleConfigurator.configure(hero: hero), animated: true)
     }
     
     func showMessageModule(with message: String) {

@@ -9,25 +9,16 @@
 import RealmSwift
 
 final class HeroesDatabaseService: MainDatabaseService {
-    static let sshared = HeroesDatabaseService()
+    static let heroDatabaseShared = HeroesDatabaseService()
     
-    
-    func getHeroesFromDatabase(onCompletion: @escaping ([MiniHeroEntity]) -> Void, onError: ((String) -> Void)? = nil) {
-        let hero = realm.objects(HeroesEntry.self)
-        guard !hero.isEmpty else {
-            onError?("error")
+    func getHeroesFromDatabase(completionHandler: @escaping ([HeroEntity]) -> Void, errorHandler: ((String) -> Void)? = nil) {
+        let heroEntries = realm.objects(HeroEntry.self)
+        guard !heroEntries.isEmpty else {
+            errorHandler?("error")
             return
         }
         
-        onCompletion(fromEntryToEntity(entry: hero))
+        completionHandler(heroEntries.map { $0.toEntity() })
     }
     
-    func fromEntryToEntity(entry: Results<HeroesEntry>) -> [MiniHeroEntity] {
-        var heroesEntity: [MiniHeroEntity] = []
-        entry.forEach { (heroEntry) in
-            heroesEntity.append(MiniHeroEntity(name: heroEntry.name,
-                                               image: heroEntry.image))
-        }
-        return heroesEntity
-    }
 }

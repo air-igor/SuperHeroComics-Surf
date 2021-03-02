@@ -7,6 +7,6 @@
 //
 
 protocol SearchSuperHeroRouterInput {
-    func showDetailModule(heroes: HeroEntity)
+    func showDetailModule(with hero: HeroEntity)
     func showMessageModule(with message: String)
 }

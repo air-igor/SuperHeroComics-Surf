@@ -36,12 +36,13 @@ final class HeroesNetworkManager {
                 return onError(.errorResponse)
             }
             let decoder = JSONDecoder()
-            guard let objects = try? decoder.decode(HeroModel.self, from: data) else {
+            guard let objects = try? decoder.decode(HeroesResultEntity.self, from: data) else {
                 return onError(.errorParsing)
             }
             
             DispatchQueue.main.async {
                 onCompletion(objects.results)
+                print(Realm.Configuration.defaultConfiguration)
             }
         })
         
@@ -62,7 +63,7 @@ final class HeroesNetworkManager {
             }
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
-            guard let objects = try? decoder.decode(HeroModel.self, from: data) else {
+            guard let objects = try? decoder.decode(HeroesResultEntity.self, from: data) else {
                 return onError(.errorParsing)
             }
             DispatchQueue.main.async {

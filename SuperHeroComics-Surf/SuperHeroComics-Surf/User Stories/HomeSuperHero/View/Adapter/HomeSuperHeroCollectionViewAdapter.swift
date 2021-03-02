@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeSuperHeroAdapterOutput {
-    func show(heroes: HeroEntity)
+    func selectedHero(heroes: HeroEntity)
 }
 
 final class HomeSuperHeroCollectionViewAdapter: NSObject {
@@ -62,7 +62,7 @@ extension HomeSuperHeroCollectionViewAdapter: UICollectionViewDataSource {
 
 extension HomeSuperHeroCollectionViewAdapter: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.output?.show(heroes: items[indexPath.row])
+        self.output?.selectedHero(heroes: items[indexPath.row])
     }
 }
 

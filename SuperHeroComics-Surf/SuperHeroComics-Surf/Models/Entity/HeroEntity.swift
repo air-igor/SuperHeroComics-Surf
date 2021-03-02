@@ -1,5 +1,5 @@
 //
-//  HeroModel.swift
+//  HeroEntity.swift
 //  SuperHeroComics-Surf
 //
 //  Created by Игорь Попов on 15.02.2021.
@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - HeroModel
 
-struct HeroModel: Codable {
+struct HeroesResultEntity: Codable {
     let response, resultsFor: String?
     let results: [HeroEntity]
     
@@ -25,48 +25,36 @@ struct HeroModel: Codable {
 
 struct HeroEntity: Codable {
     let id, name: String?
-    let powerstats: Powerstats?
-    let biography: Biography?
-    let appearance: Appearance?
-    let work: Work?
-    let connections: Connections?
-    let image: Image?
+    let powerstats: PowerstatsEntity?
+    let biography: BiographyEntity?
+    let work: WorkEntity?
+    let connections: ConnectionsEntity?
+    let image: ImageEntity?
     
-}
-
-
-// MARK: - Appearance
-
-struct Appearance: Codable {
-    let gender, race: String?
-    let height, weight: [String]?
-    let eyeColor, hairColor: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case gender, race, height, weight
-        case eyeColor = "eye-color"
-        case hairColor = "hair-color"
+    func toEntry() -> HeroEntry {
+        return HeroEntry.toEntry(from: self)
     }
+
 }
 
 // MARK: - Biography
 
-struct Biography: Codable {
+struct BiographyEntity: Codable {
     let fullName, alterEgos: String?
-    let placeOfBirth, firstAppearance, publisher, alignment: String?
+    let placeOfBirth, firstAppearance, publisher: String?
     
     enum CodingKeys: String, CodingKey {
         case fullName = "full-name"
         case alterEgos = "alter-egos"
         case placeOfBirth = "place-of-birth"
         case firstAppearance = "first-appearance"
-        case publisher, alignment
+        case publisher
     }
 }
 
-// MARK: - Connections
+// MARK: - ConnectionsEntity
 
-struct Connections: Codable {
+struct ConnectionsEntity: Codable {
     let groupAffiliation, relatives: String?
     
     enum CodingKeys: String, CodingKey {
@@ -75,28 +63,21 @@ struct Connections: Codable {
     }
 }
 
-// MARK: - Image
+// MARK: - ImageEntity
 
-struct Image: Codable {
+struct ImageEntity: Codable {
     let url: String?
 }
 
-// MARK: - Powerstats
+// MARK: - PowerstatsEntity
 
-struct Powerstats: Codable {
+struct PowerstatsEntity: Codable {
     let intelligence, strength, speed, durability: String?
     let power, combat: String?
 }
 
-// MARK: - Work
+// MARK: - WorkEntity
 
-struct Work: Codable {
+struct WorkEntity: Codable {
     let occupation, base: String?
-}
-
-// MARK: - MiniHeroEntity
-
-struct MiniHeroEntity {
-    let name: String?
-    let image: String?
 }

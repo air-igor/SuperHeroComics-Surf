@@ -33,6 +33,7 @@ struct DetailSuperHeroParametersViewModel {
 
 
 struct DetailSuperHeroViewModel {
+    
     var header: DetailSuperHeroHeaderViewModel? = nil
     var biographyParameters: DetailSuperHeroParametersViewModel? = nil
     var workParameters: DetailSuperHeroParametersViewModel? = nil

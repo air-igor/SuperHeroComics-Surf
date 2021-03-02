@@ -8,4 +8,6 @@
 
 protocol SearchSuperHeroViewOutput: class {
     func configure(with text: String)
+    func heroSelected(hero: SearchSuperHeroViewModel)
+    func addToFavorite(hero: SearchSuperHeroViewModel)
 }

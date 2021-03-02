@@ -14,6 +14,7 @@ enum TabBarItem: CaseIterable {
     
     case home
     case search
+    case favorite
     
     // MARK: - Properties
     
@@ -23,6 +24,8 @@ enum TabBarItem: CaseIterable {
             return "Heroes"
         case .search:
             return "Search"
+        case .favorite:
+            return "Favorites"
         }
     }
     
@@ -31,6 +34,8 @@ enum TabBarItem: CaseIterable {
         case .home:
             return UIImage(named: "homeIcon") ?? UIImage()
         case .search:
+            return UIImage(named: "searchIcon") ?? UIImage()
+        case .favorite:
             return UIImage(named: "searchIcon") ?? UIImage()
         }
     }

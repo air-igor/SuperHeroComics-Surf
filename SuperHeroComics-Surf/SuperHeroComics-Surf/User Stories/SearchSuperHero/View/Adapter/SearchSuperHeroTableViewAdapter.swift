@@ -9,7 +9,8 @@
 import UIKit
 
 protocol SearchSuperHeroTableViewAdapterOutput {
-    func show(heroes: HeroEntity)
+    func heroSelected(hero: SearchSuperHeroViewModel)
+    func addToFavorite(hero: SearchSuperHeroViewModel)
 }
 
 final class SearchSuperHeroTableViewAdapter: NSObject {
@@ -18,7 +19,7 @@ final class SearchSuperHeroTableViewAdapter: NSObject {
     
     private let output: SearchSuperHeroTableViewAdapterOutput?
     
-    private var items: [HeroEntity] = []
+    private var items: [SearchSuperHeroViewModel] = []
     private var tableView: UITableView
     
     // MARK: - Initialization
@@ -32,7 +33,7 @@ final class SearchSuperHeroTableViewAdapter: NSObject {
     
     // MARK: - Internal methods
     
-    func configure(with items: [HeroEntity]) {
+    func configure(with items: [SearchSuperHeroViewModel]) {
         self.items = items
         tableView.reloadData()
     }
@@ -59,8 +60,21 @@ extension SearchSuperHeroTableViewAdapter: UITableViewDataSource {
 
 extension SearchSuperHeroTableViewAdapter: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.output?.show(heroes: items[indexPath.row])
+        self.output?.heroSelected(hero: items[indexPath.row])
     }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let favorite = UITableViewRowAction(style: .normal, title: "Favorite") { [weak self] _, index in
+            if let item = self?.items[index.row] {
+                self?.output?.addToFavorite(hero: item)
+            }
+        }
+        
+        favorite.backgroundColor = .orange
+        
+        return [favorite]
+    }
+
 }
 
 // MARK: - Private Methods

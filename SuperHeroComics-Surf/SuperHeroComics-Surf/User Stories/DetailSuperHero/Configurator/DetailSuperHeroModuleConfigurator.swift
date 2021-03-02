@@ -12,10 +12,10 @@ final class DetailSuperHeroModuleConfigurator {
     
     // MARK: - Internal methods
     
-    static func configure(heroes: HeroEntity, output: DetailSuperHeroModuleOutput? = nil) -> DetailSuperHeroViewController {
+    static func configure(hero: HeroEntity, output: DetailSuperHeroModuleOutput? = nil) -> DetailSuperHeroViewController {
         
         let view = DetailSuperHeroViewController()
-        let presenter = DetailSuperHeroPresenter(with: heroes)
+        let presenter = DetailSuperHeroPresenter(with: hero)
         let router = DetailSuperHeroRouter()
         
         presenter.output = output

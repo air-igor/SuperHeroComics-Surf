@@ -25,7 +25,6 @@ final class SearchSuperHeroModuleConfigurator {
         router.view = view
         
         view.output = presenter
-        view.adapterOutput = presenter
         
         return view
     }
