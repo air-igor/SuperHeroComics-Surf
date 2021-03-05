@@ -6,7 +6,7 @@
 //  Copyright © 2021 AirIgor. All rights reserved.
 //
 
-final class HomeSuperHeroPresenter: HomeSuperHeroViewOutput, HomeSuperHeroModuleInput, HomeSuperHeroAdapterOutput {
+final class HomeSuperHeroPresenter: HomeSuperHeroViewOutput, HomeSuperHeroModuleInput {
     
     // MARK: - Properties
     
@@ -24,7 +24,8 @@ final class HomeSuperHeroPresenter: HomeSuperHeroViewOutput, HomeSuperHeroModule
         }
     }
     
-    func selectedHero(heroes: HeroEntity) {
-        router?.showDetailModule(heroes: heroes)
+    func heroSelected(hero: HeroEntity) {
+        router?.showDetailModule(heroes: hero)
     }
+    
 }
