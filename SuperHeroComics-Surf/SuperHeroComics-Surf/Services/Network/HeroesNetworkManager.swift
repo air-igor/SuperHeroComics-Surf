@@ -42,7 +42,6 @@ final class HeroesNetworkManager {
             
             DispatchQueue.main.async {
                 onCompletion(objects.results)
-                print(Realm.Configuration.defaultConfiguration)
             }
         })
         
