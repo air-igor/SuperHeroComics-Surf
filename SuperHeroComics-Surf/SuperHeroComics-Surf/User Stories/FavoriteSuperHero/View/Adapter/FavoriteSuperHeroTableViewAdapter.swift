@@ -11,7 +11,6 @@ import UIKit
 final class FavoriteSuperHeroTableViewAdapter: NSObject {
     
     // MARK: - Private Properties
-    
     private var items: [SearchSuperHeroViewModel] = []
     private var tableView: UITableView
     
@@ -58,7 +57,7 @@ private extension FavoriteSuperHeroTableViewAdapter {
         tableView.dataSource = self
         tableView.showsVerticalScrollIndicator = true
         tableView.showsHorizontalScrollIndicator = false
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = .singleLine
     }
     
 }
