@@ -8,6 +8,10 @@
 
 final class FavoriteSuperHeroPresenter: FavoriteSuperHeroViewOutput, FavoriteSuperHeroModuleInput {
     
+    // MARK: - Private Properties
+       
+       private var heroEntites: [HeroEntity] = []
+    
     // MARK: - Properties
     
     var view: FavoriteSuperHeroViewInput?
@@ -23,6 +27,5 @@ final class FavoriteSuperHeroPresenter: FavoriteSuperHeroViewOutput, FavoriteSup
             print(error)
         }
     }
-    
 }
 
