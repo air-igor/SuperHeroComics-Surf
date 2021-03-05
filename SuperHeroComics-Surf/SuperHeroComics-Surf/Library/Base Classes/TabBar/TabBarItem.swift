@@ -36,7 +36,7 @@ enum TabBarItem: CaseIterable {
         case .search:
             return UIImage(named: "searchIcon") ?? UIImage()
         case .favorite:
-            return UIImage(named: "searchIcon") ?? UIImage()
+            return UIImage(named: "favoritesIcon") ?? UIImage()
         }
     }
 
