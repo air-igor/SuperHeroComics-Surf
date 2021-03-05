@@ -8,4 +8,5 @@
 
 protocol HomeSuperHeroViewOutput {
     func configure()
+    func heroSelected(hero: HeroEntity)
 }

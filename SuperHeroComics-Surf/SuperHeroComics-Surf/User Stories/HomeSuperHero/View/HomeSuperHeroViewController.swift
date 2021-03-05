@@ -18,11 +18,10 @@ final class HomeSuperHeroViewController: UIViewController, HomeSuperHeroViewInpu
     // MARK: - Private properties
     
     private let refreshControl = UIRefreshControl()
-    private lazy var adapter = HomeSuperHeroCollectionViewAdapter(collectionView: collectionView, output: adapterOutput)
+    private lazy var adapter = HomeSuperHeroCollectionViewAdapter(collectionView: collectionView, output: self)
     
     // MARK: - Properties
     
-    var adapterOutput: HomeSuperHeroAdapterOutput?
     var output: HomeSuperHeroViewOutput?
     
     
@@ -51,3 +50,11 @@ final class HomeSuperHeroViewController: UIViewController, HomeSuperHeroViewInpu
         refreshControl.endRefreshing()
     }
 }
+
+extension HomeSuperHeroViewController: HomeSuperHeroAdapterOutput {
+    func heroSelected(hero: HeroEntity) {
+        output?.heroSelected(hero: hero)
+    }
+    
+}
+
