@@ -14,6 +14,7 @@ final class FavoriteSuperHeroTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
     }
     
     func configure(with model: SearchSuperHeroViewModel) {
