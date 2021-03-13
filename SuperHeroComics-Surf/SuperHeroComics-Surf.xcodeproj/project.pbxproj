@@ -275,9 +275,9 @@
 		32558B1425E6D38900A47A42 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				32558B2A25E6DECF00A47A42 /* SearchSuperHeroPresenter.swift */,
 				32558B2625E6DD8C00A47A42 /* SearchSuperHeroModuleInput.swift */,
 				32558B2825E6DD9A00A47A42 /* SearchSuperHeroModuleOutput.swift */,
-				32558B2A25E6DECF00A47A42 /* SearchSuperHeroPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";

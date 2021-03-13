@@ -20,6 +20,7 @@
 internal enum Asset {
   internal static let favoritesIcon = ImageAsset(name: "favoritesIcon")
   internal static let homeIcon = ImageAsset(name: "homeIcon")
+  internal static let launchLogo = ImageAsset(name: "launchLogo")
   internal static let noAvatar = ImageAsset(name: "noAvatar")
   internal static let searchIcon = ImageAsset(name: "searchIcon")
 }
