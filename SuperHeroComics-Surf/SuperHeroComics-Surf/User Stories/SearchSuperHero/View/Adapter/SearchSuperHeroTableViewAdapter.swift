@@ -68,9 +68,11 @@ extension SearchSuperHeroTableViewAdapter: UITableViewDelegate {
             if let item = self?.items[index.row] {
                 self?.output?.addToFavorite(hero: item)
             }
+            
         }
         
         favorite.backgroundColor = .orange
+        
         
         return [favorite]
     }

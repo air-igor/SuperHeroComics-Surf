@@ -11,6 +11,7 @@ import UIKit
 final class FavoriteSuperHeroTableViewAdapter: NSObject {
     
     // MARK: - Private Properties
+    
     private var items: [SearchSuperHeroViewModel] = []
     private var tableView: UITableView
     

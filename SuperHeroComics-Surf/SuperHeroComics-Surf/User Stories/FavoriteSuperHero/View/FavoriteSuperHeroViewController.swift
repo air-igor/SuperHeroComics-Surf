@@ -9,19 +9,18 @@
 import UIKit
 
 final class FavoriteSuperHeroViewController: UIViewController, FavoriteSuperHeroViewInput, ModuleTransitionable {
-
+    
     // MARK: - IBOutlets
     
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
-
+    
     var output: FavoriteSuperHeroViewOutput?
     
     // MARK: - Private properties
     
     private lazy var adapter = FavoriteSuperHeroTableViewAdapter(tableView: tableView)
-    
     
     // MARK: - UIViewController
     
@@ -34,4 +33,5 @@ final class FavoriteSuperHeroViewController: UIViewController, FavoriteSuperHero
     func viewModel(array: [SearchSuperHeroViewModel]) {
         adapter.configure(with: array)
     }
+    
 }
