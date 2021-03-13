@@ -14,7 +14,7 @@ final class HeroesDatabaseService: MainDatabaseService {
     func getHeroesFromDatabase(completionHandler: @escaping ([HeroEntity]) -> Void, errorHandler: ((String) -> Void)? = nil) {
         let heroEntries = realm.objects(HeroEntry.self)
         guard !heroEntries.isEmpty else {
-            errorHandler?("error")
+            errorHandler?("Favorite list is clear or loading error")
             return
         }
         
