@@ -8,8 +8,8 @@ API предоставляет информацию о всех супергер
 Приложение включает в себя 4 экрана: список супергероев, просмотр детальной информации о герое, поиск героя, список избранных героев.
 
 <p align = "center">
+  <img src = "https://github.com/air-igor/SuperHeroComics-Surf/blob/main/SuperHeroComics-Surf/readme/screenLaunchSHC.png" width="30%" height="30%">
   <img src = "https://github.com/air-igor/SuperHeroComics-Surf/blob/main/SuperHeroComics-Surf/readme/previewSHC.gif">
-  <img src = "https://github.com/air-igor/SuperHeroComics-Surf/blob/main/SuperHeroComics-Surf/readme/screenLaunchSHC.png" width="35%" height="35%">
 </p>
 
 ## О реализации
