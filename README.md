@@ -9,7 +9,7 @@ API предоставляет информацию о всех супергер
 
 <p align = "center">
   <img src = "https://github.com/air-igor/SuperHeroComics-Surf/blob/main/SuperHeroComics-Surf/readme/screenLaunchSHC.png" width="30%" height="30%">
-  <img src = "https://github.com/air-igor/SuperHeroComics-Surf/blob/main/SuperHeroComics-Surf/readme/previewSHC.gif">
+  <img src = "https://github.com/air-igor/SuperHeroComics-Surf/blob/main/SuperHeroComics-Surf/readme/previewSHC.gif" width="30%" height="30%">
 </p>
 
 ## О реализации
